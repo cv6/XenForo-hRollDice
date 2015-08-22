@@ -52,14 +52,44 @@ class Hoffi_DM_Model_DiceManager_Post extends XFCP_Hoffi_DM_Model_DiceManager_Po
 		return ($viewingUser['user_id'] && XenForo_Permission::hasContentPermission($nodePermissions, 'can_see_dice_post'));
 	}
 
+	protected $_rolls = array();
+
+	public function getAndMergeAttachmentsIntoPosts(array $posts)
+	{
+		$postsWithDice = array();
+		foreach ($posts AS $postId => &$post)
+		{
+			if ($post['roll_id'])
+			{
+				$postsWithDice[] = $postId;
+			}
+		}
+
+		if($postsWithDice)
+		{
+			$this->_rolls = $this->_getRollModel()->getRollsByPostIds($postsWithDice);
+		}
+
+		return parent::getAndMergeAttachmentsIntoPosts($posts);
+	}
+
 	public function preparePost(array $post, array $thread, array $forum, array $nodePermissions = null, array $viewingUser = null)
 	{
-		$post['hasDice'] = (bool)$post['roll_id'];
+		$roll_id = $post['roll_id'];
+		$post['hasDice'] = (bool)$roll_id;
 		$post['canViewDice'] = $this->canSeeDiceRoll($post, $thread, $forum, $nodePermissions, $viewingUser);
 		$post['canDeleteDice'] = $this->canDeleteDiceRoll($post, $thread, $forum, $nodePermissions, $viewingUser);
 		if ($post['hasDice'])
 		{
-			$rolls = $this->_getRollModel()->fetchRollsForPost($post['post_id']);
+			// fetch from cache if exists
+			if (isset($this->_rolls[$roll_id]))
+			{
+				$rolls = array($roll_id => $this->_rolls[$roll_id]);
+			}
+			else
+			{
+				$rolls = $this->_getRollModel()->fetchRollsForPost($roll_id);
+			}
 			$allDice = XenForo_Application::getSimpleCacheData('hAllDice');
 			// $allDice = array();
 			if (empty($allDice))
