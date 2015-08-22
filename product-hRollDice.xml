@@ -695,10 +695,22 @@ $0]]></replace>
     <listener event_id="criteria_user" execute_order="10" callback_class="Hoffi_DM_EventListener_Dice" callback_method="userCriteria" active="0" hint="" description="userCriteria"/>
     <listener event_id="file_health_check" execute_order="10" callback_class="Hoffi_DM_FileSum" callback_method="addHashes" active="1" hint="" description="Adds File Healtch Check"/>
     <listener event_id="init_dependencies" execute_order="10" callback_class="Hoffi_DM_EventListener_Dice" callback_method="helper" active="1" hint="" description="Adds Dice Helper"/>
-    <listener event_id="load_class_controller" execute_order="10" callback_class="Hoffi_DM_EventListener_Dice" callback_method="listenController" active="1" hint="" description="Extends Controller"/>
-    <listener event_id="load_class_datawriter" execute_order="10" callback_class="Hoffi_DM_EventListener_Dice" callback_method="listenDataWriter" active="1" hint="" description="Extend the Datawrietrs"/>
-    <listener event_id="load_class_model" execute_order="10" callback_class="Hoffi_DM_EventListener_Dice" callback_method="listenModel" active="1" hint="" description="Extends the Models"/>
-    <listener event_id="template_create" execute_order="10" callback_class="Hoffi_DM_EventListener_Dice" callback_method="templateCreate" active="1" hint="" description="adds parameter for Icon"/>
+    <listener event_id="load_class" execute_order="10" callback_class="Hoffi_DM_EventListener_Dice" callback_method="listenController" active="1" hint="XenForo_ControllerPublic_Help" description="XenForo_ControllerPublic_Help"/>
+    <listener event_id="load_class" execute_order="10" callback_class="Hoffi_DM_EventListener_Dice" callback_method="listenController" active="1" hint="XenForo_ControllerAdmin_Forum" description="XenForo_ControllerAdmin_Forum"/>
+    <listener event_id="load_class" execute_order="10" callback_class="Hoffi_DM_EventListener_Dice" callback_method="listenController" active="1" hint="XenForo_ControllerAdmin_Stats" description="XenForo_ControllerAdmin_Stats"/>
+    <listener event_id="load_class" execute_order="10" callback_class="Hoffi_DM_EventListener_Dice" callback_method="listenController" active="1" hint="XenForo_ControllerPublic_InlineMod_Post" description="XenForo_ControllerPublic_InlineMod_Post"/>
+    <listener event_id="load_class" execute_order="10" callback_class="Hoffi_DM_EventListener_Dice" callback_method="listenController" active="1" hint="XenForo_ControllerPublic_Thread" description="XenForo_ControllerPublic_Thread"/>
+    <listener event_id="load_class" execute_order="10" callback_class="Hoffi_DM_EventListener_Dice" callback_method="listenController" active="1" hint="XenForo_ControllerPublic_Forum" description="XenForo_ControllerPublic_Forum"/>
+    <listener event_id="load_class" execute_order="10" callback_class="Hoffi_DM_EventListener_Dice" callback_method="listenDataWriter" active="1" hint="XenForo_DataWriter_Forum" description="XenForo_DataWriter_Forum"/>
+    <listener event_id="load_class" execute_order="10" callback_class="Hoffi_DM_EventListener_Dice" callback_method="listenDataWriter" active="1" hint="XenForo_DataWriter_Discussion_Thread" description="XenForo_DataWriter_Discussion_Thread"/>
+    <listener event_id="load_class" execute_order="10" callback_class="Hoffi_DM_EventListener_Dice" callback_method="listenDataWriter" active="1" hint="XenForo_DataWriter_Discussion" description="XenForo_DataWriter_Discussion"/>
+    <listener event_id="load_class" execute_order="10" callback_class="Hoffi_DM_EventListener_Dice" callback_method="listenDataWriter" active="1" hint="XenForo_DataWriter_DiscussionMessage_Post" description="XenForo_DataWriter_DiscussionMessage_Post"/>
+    <listener event_id="load_class" execute_order="10" callback_class="Hoffi_DM_EventListener_Dice" callback_method="listenModel" active="1" hint="XenForo_Model_Forum" description="XenForo_Model_Forum"/>
+    <listener event_id="load_class" execute_order="10" callback_class="Hoffi_DM_EventListener_Dice" callback_method="listenModel" active="1" hint="XenForo_Model_Thread" description="XenForo_Model_Thread"/>
+    <listener event_id="load_class" execute_order="10" callback_class="Hoffi_DM_EventListener_Dice" callback_method="listenModel" active="1" hint="XenForo_Model_User" description="XenForo_Model_User"/>
+    <listener event_id="load_class" execute_order="10" callback_class="Hoffi_DM_EventListener_Dice" callback_method="listenModel" active="1" hint="XenForo_Model_Post" description="XenForo_Model_Post"/>
+    <listener event_id="load_class" execute_order="10" callback_class="Hoffi_DM_EventListener_Dice" callback_method="listenModel" active="1" hint="XenForo_Model_Stats" description="XenForo_Model_Stats"/>
+    <listener event_id="template_create" execute_order="10" callback_class="Hoffi_DM_EventListener_Dice" callback_method="templateCreate" active="1" hint="application_splash" description="adds parameter for Icon"/>
   </code_event_listeners>
   <cron>
     <entry entry_id="hDeleteUnassignedRolls" cron_class="Hoffi_DM_Cron" cron_method="deleteUnassignedRolls" active="1"><![CDATA[{"day_type":"dom","dom":["-1"],"hours":["1"],"minutes":["15"]}]]></entry>

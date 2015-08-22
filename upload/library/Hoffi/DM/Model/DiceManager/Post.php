@@ -39,12 +39,24 @@ class Hoffi_DM_Model_DiceManager_Post extends XFCP_Hoffi_DM_Model_DiceManager_Po
 
 		return $parent;
 	}
+    
+	public function canDeleteDiceRoll(array $post, array $thread, array $forum, array $nodePermissions = null, array $viewingUser = null)
+	{
+		$this->standardizeViewingUserReferenceForNode($thread['node_id'], $viewingUser, $nodePermissions);
+		return ($viewingUser['user_id'] && XenForo_Permission::hasContentPermission($nodePermissions, 'can_delete_diceroll_post'));
+	}
+    
+	public function canSeeDiceRoll(array $post, array $thread, array $forum, array $nodePermissions = null, array $viewingUser = null)
+	{
+		$this->standardizeViewingUserReferenceForNode($thread['node_id'], $viewingUser, $nodePermissions);
+		return ($viewingUser['user_id'] && XenForo_Permission::hasContentPermission($nodePermissions, 'can_see_dice_post'));
+	}
 
 	public function preparePost(array $post, array $thread, array $forum, array $nodePermissions = null, array $viewingUser = null)
 	{
 		$post['hasDice'] = (bool)$post['roll_id'];
-		$post['canViewDice'] = $nodePermissions['can_see_dice_post'];
-		$post['canDeleteDice'] = $nodePermissions['can_delete_diceroll_post'];
+		$post['canViewDice'] = $this->canSeeDiceRoll($post, $thread, $forum, $nodePermissions, $viewingUser);
+		$post['canDeleteDice'] = $this->canDeleteDiceRoll($post, $thread, $forum, $nodePermissions, $viewingUser);
 		if ($post['hasDice'])
 		{
 			$rolls = $this->_getRollModel()->fetchRollsForPost($post['post_id']);

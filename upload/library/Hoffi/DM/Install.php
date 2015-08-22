@@ -68,33 +68,35 @@ class Hoffi_DM_Install
 
 		$tables = array(
 				'xf_hoffi_dm_dice' =>
-					"CREATE TABLE `xf_hoffi_dm_dice` (
+					"CREATE TABLE IF NOT EXISTS `xf_hoffi_dm_dice` (
 						`tag` VARCHAR(10) NOT NULL COLLATE 'latin1_swedish_ci',
 						`title` VARCHAR(50) NOT NULL COLLATE 'latin1_swedish_ci',
 						`sides` SMALLINT(3) NOT NULL,
 						`values` VARCHAR(200) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
 						`active` TINYINT(1) NOT NULL DEFAULT '0',
 						`image` VARCHAR(50) NULL DEFAULT NULL,
-						PRIMARY KEY (`tag`)
+						PRIMARY KEY (`tag`),
+                        UNIQUE INDEX `title` (`title`)
 					)
 					COLLATE='utf8_general_ci'
 					ENGINE=InnoDB;",
 				
 				'xf_hoffi_dm_rules' => 
-					"CREATE TABLE `xf_hoffi_dm_rules` (
+					"CREATE TABLE IF NOT EXISTS `xf_hoffi_dm_rules` (
 							`rule` VARCHAR(10) NOT NULL,
 							`title` VARCHAR(50) NOT NULL COLLATE 'latin1_swedish_ci',
 							`active` TINYINT(1) NOT NULL,
 							`php_callback_class` VARCHAR(100) NOT NULL COLLATE 'latin1_swedish_ci',
 							`php_callback_method` VARCHAR(50) NOT NULL COLLATE 'latin1_swedish_ci',
 							`optionlist` VARCHAR(250) NOT NULL COLLATE 'latin1_swedish_ci',
-							PRIMARY KEY (`rule`)
+							PRIMARY KEY (`rule`),
+                            UNIQUE INDEX `title` (`title`)
 						)
 						COLLATE='utf8_general_ci'
 						ENGINE=InnoDB;",
 				
 				'xf_hoffi_dm_wireset' => 
-					"CREATE TABLE `xf_hoffi_dm_wireset` (
+					"CREATE TABLE IF NOT EXISTS `xf_hoffi_dm_wireset` (
 							`tag` VARCHAR(10) NOT NULL,
 							`title` VARCHAR(100) NOT NULL,
 							`description` MEDIUMTEXT NOT NULL,
@@ -119,7 +121,7 @@ class Hoffi_DM_Install
 						ENGINE=InnoDB;",
 				
 				'xf_hoffi_dm_rolls' => 
-					"CREATE TABLE `xf_hoffi_dm_rolls` (
+					"CREATE TABLE IF NOT EXISTS `xf_hoffi_dm_rolls` (
 						`roll_id` INT(10) NOT NULL AUTO_INCREMENT,
 						`hash` VARCHAR(35) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
 						`post_id` INT(10) NOT NULL,
@@ -134,6 +136,11 @@ class Hoffi_DM_Install
 						`roll_time` INT(10) NOT NULL,
 						`options` TEXT NULL,
 						PRIMARY KEY (`roll_id`),
+                        KEY `post_id` (`post_id`),
+                        KEY `user_id` (`user_id`),
+                        KEY `hash` (`hash`,`roll_time`),
+                        KEY `thread_id` (`thread_id`,`roll_time`),
+                        KEY `roll_time` (`roll_state`,`roll_time`),
 						INDEX `FK_xf_hoffi_dm_rolls_xf_hoffi_dm_wireset` (`wireset`),
 						CONSTRAINT `FK_xf_hoffi_dm_rolls_xf_hoffi_dm_wireset` FOREIGN KEY (`wireset`) REFERENCES `xf_hoffi_dm_wireset` (`tag`) ON UPDATE NO ACTION ON DELETE SET NULL
 					)
@@ -202,9 +209,9 @@ class Hoffi_DM_Install
 			ADD COLUMN `h_dm_wiresets` TEXT NULL,
 			ADD COLUMN `h_dm_dicecount` TINYINT(3) UNSIGNED NOT NULL DEFAULT '5' AFTER `h_dm_allowdiceroll`;
 		";
-		$alters['xf_thread'] = "
-			ALTER TABLE `xf_thread`
-				ADD COLUMN `h_dice_rolls` INT UNSIGNED NOT NULL DEFAULT '0'";
+//		$alters['xf_thread'] = "
+//			ALTER TABLE `xf_thread`
+//				ADD COLUMN `h_dice_rolls` INT UNSIGNED NOT NULL DEFAULT '0'";
 
 		return $alters;
 	}
@@ -271,6 +278,7 @@ class Hoffi_DM_Install
 
 	private static function _logError($e)
 	{
+        XenForo_Error::logException($e, false);
 		$text = "Error: " . $e->getCode() . " - " . $e->getMessage();
 		self::_log($text . "\n" . $e->getTraceAsString(), 'hDiceError');
 		self::_log($text);
