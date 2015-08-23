@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <addon addon_id="hRollDice" title="[h] Roll Dice in Threads" version_string="RC 2" version_id="1048" url="" install_callback_class="Hoffi_DM_Install" install_callback_method="install" uninstall_callback_class="Hoffi_DM_Install" uninstall_callback_method="uninstall">
   <admin_navigation>
-    <navigation navigation_id="dm_category" parent_navigation_id="applications" display_order="3600" link="" admin_permission_id="dicemanager" debug_only="0" hide_no_children="0"/>
+    <navigation navigation_id="dm_category" parent_navigation_id="applications" display_order="3600" link="" admin_permission_id="dicemanager" debug_only="0" hide_no_children="1"/>
     <navigation navigation_id="dm_dice" parent_navigation_id="dm_category" display_order="40" link="dm-dice" admin_permission_id="dicemanager" debug_only="0" hide_no_children="0"/>
     <navigation navigation_id="dmrules" parent_navigation_id="dm_category" display_order="99" link="dm-rules" admin_permission_id="dicemanager" debug_only="0" hide_no_children="0"/>
     <navigation navigation_id="hDmOptions" parent_navigation_id="dm_category" display_order="100" link="options/list/hDice" admin_permission_id="option" debug_only="0" hide_no_children="0"/>
