@@ -60,7 +60,7 @@ class Hoffi_DM_Model_DiceManager_User extends XFCP_Hoffi_DM_Model_DiceManager_Us
 		if (empty($wiresets))
 		{
 			$wiresets = $this->_getModelWiresets()->getAllWiresets();
-			XenForo_Application::getSimpleCacheData('hAllWiresets', $wiresets);
+			XenForo_Application::setSimpleCacheData('hAllWiresets', $wiresets);
 		}
 		return (array_key_exists($tag, $wiresets) ? $wiresets[$tag] : false);
 	}

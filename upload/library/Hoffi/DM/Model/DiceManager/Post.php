@@ -206,7 +206,7 @@ class Hoffi_DM_Model_DiceManager_Post extends XFCP_Hoffi_DM_Model_DiceManager_Po
 		if (empty($wireset))
 		{
 			$wireset = $this->_getWiresetModel()->getWiresetByTag($tag);
-			XenForo_Application::getSimpleCacheData('hWireset_'.$tag, $wireset);
+			XenForo_Application::setSimpleCacheData('hWireset_'.$tag, $wireset);
 		}
 		return $wireset;
 	}
