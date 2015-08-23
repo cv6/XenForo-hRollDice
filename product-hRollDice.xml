@@ -1330,7 +1330,7 @@ div.nodeInfo:hover span.hNodeDie {
 						<xen:if is="{$roll.sum} > 0">
 							{xen:phrase h_dm_with_this_sum, 'sum={$roll.sum}'}
 						</xen:if>
-						<xen:if is="{$message.canDeleteDice}"><a href="{xen:link roll-delete/delete, '$roll', 'roll={$roll_id}'}" title="{xen:phrase h_dm_delete_roll}" class="deleteRoll OverlayTrigger"></a></xen:if>
+						<xen:if is="{$message.canDeleteDice}"><a href="{xen:link roll-delete/delete, '$roll', 'roll_id={$roll_id}'}" title="{xen:phrase h_dm_delete_roll}" class="deleteRoll OverlayTrigger"></a></xen:if>
 					</h3>
 					<ul class="diceDisplay" id="roll-{$roll_id}" {xen:if '{$xenOptions.hCollapseDiceInPost}=="onclosed"', 'style="display:none;"'}>
 						<xen:foreach loop="$roll.dice" key="$tag" value="$die">
