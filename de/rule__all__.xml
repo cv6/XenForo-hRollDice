@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rules>
+  <rule>
+    <tag>above</tag>
+    <title>Über X</title>
+    <active>1</active>
+    <callback_classname>Hoffi_DM_Dice_Rules</callback_classname>
+    <callback_method>AboveX</callback_method>
+    <options>rollover</options>
+  </rule>
+  <rule>
+    <tag>below</tag>
+    <title>Unter X</title>
+    <active>1</active>
+    <callback_classname>Hoffi_DM_Dice_Rules</callback_classname>
+    <callback_method>UnderX</callback_method>
+    <options>difficulty</options>
+  </rule>
+  <rule>
+    <tag>pairs</tag>
+    <title>Zähle Pasch</title>
+    <active>1</active>
+    <callback_classname>Hoffi_DM_Dice_Rules</callback_classname>
+    <callback_method>countPairs</callback_method>
+    <options />
+  </rule>
+  <rule>
+    <tag>dsa</tag>
+    <title>Das Schwarze Auge</title>
+    <active>1</active>
+    <callback_classname>Hoffi_DM_Dice_Rules</callback_classname>
+    <callback_method>specialDSA</callback_method>
+    <options>dsa1
+dsa2
+dsa3
+points</options>
+  </rule>
+  <rule>
+    <tag>dsa5</tag>
+    <title>Das Schwarze Auge 5</title>
+    <active>1</active>
+    <callback_classname>Hoffi_DM_Dice_Rules</callback_classname>
+    <callback_method>specialDSA5</callback_method>
+    <options>dsa1
+dsa2
+dsa3
+points
+difficulty</options>
+  </rule>
+  <rule>
+    <tag>d20</tag>
+    <title>DnD</title>
+    <active>1</active>
+    <callback_classname>Hoffi_DM_Dice_Rules</callback_classname>
+    <callback_method>speacialDandD</callback_method>
+    <options>bonus
+difficulty</options>
+  </rule>
+  <rule>
+    <tag>dd</tag>
+    <title>Dungeons und Dragons</title>
+    <active>1</active>
+    <callback_classname>Hoffi_DM_Dice_Rules</callback_classname>
+    <callback_method>HighestDie</callback_method>
+    <options />
+  </rule>
+  <rule>
+    <tag>max</tag>
+    <title>highest die</title>
+    <active>1</active>
+    <callback_classname>Hoffi_DM_Dice_Rules</callback_classname>
+    <callback_method>AboveX</callback_method>
+    <options>rollover</options>
+  </rule>
+  <rule>
+    <tag>low</tag>
+    <title>lowest die</title>
+    <active>1</active>
+    <callback_classname>Hoffi_DM_Dice_Rules</callback_classname>
+    <callback_method>LowestDie</callback_method>
+    <options>rollunder</options>
+  </rule>
+  <rule>
+    <tag>norule</tag>
+    <title>keine Regeln</title>
+    <active>1</active>
+    <callback_classname>Hoffi_DM_Dice_Rules</callback_classname>
+    <callback_method>_default</callback_method>
+    <options />
+  </rule>
+  <rule>
+    <tag>under</tag>
+    <title>x und niedriger</title>
+    <active>1</active>
+    <callback_classname>Hoffi_DM_Dice_Rules</callback_classname>
+    <callback_method>underOrEquals</callback_method>
+    <options>difficulty</options>
+  </rule>
+  <rule>
+    <tag>min</tag>
+    <title>X und höher</title>
+    <active>1</active>
+    <callback_classname>Hoffi_DM_Dice_Rules</callback_classname>
+    <callback_method>aboveOrEquals</callback_method>
+    <options>rollover</options>
+  </rule>
+  <rule>
+    <tag>sw</tag>
+    <title>Savage Worlds</title>
+    <active>1</active>
+    <callback_classname>Hoffi_DM_Dice_Rules</callback_classname>
+    <callback_method>specialSavageWorlds</callback_method>
+    <options>difficulty</options>
+  </rule>
+  <rule>
+    <tag>sr4</tag>
+    <title>Shadowrun 4</title>
+    <active>1</active>
+    <callback_classname>Hoffi_DM_Dice_Rules</callback_classname>
+    <callback_method>speacialShadowrun4</callback_method>
+    <options />
+  </rule>
+  <rule>
+    <tag>sr5</tag>
+    <title>Shadowrun 5</title>
+    <active>1</active>
+    <callback_classname>Hoffi_DM_Dice_Rules</callback_classname>
+    <callback_method>speacialShadowrun5</callback_method>
+    <options />
+  </rule>
+</rules>

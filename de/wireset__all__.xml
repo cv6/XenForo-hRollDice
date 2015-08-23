@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wiresetlist>
+  <wireset>
+    <tag>dice</tag>
+    <title>Nur Würfel</title>
+    <description>werfe ein paar Würfel</description>
+    <image />
+    <active>1</active>
+    <display_order>0</display_order>
+    <count_dice>1</count_dice>
+    <sort_dice>0</sort_dice>
+    <calculate>no</calculate>
+    <min>0</min>
+    <max>10</max>
+    <explode>no</explode>
+    <dietypes>
+      <die>__all</die>
+    </dietypes>
+    <rule>norule</rule>
+    <comments>0</comments>
+  </wireset>
+  <wireset>
+    <tag>w6</tag>
+    <title>Standard W6</title>
+    <description>Normale W6</description>
+    <image />
+    <active>1</active>
+    <display_order>2</display_order>
+    <count_dice>1</count_dice>
+    <sort_dice>0</sort_dice>
+    <calculate>everytime</calculate>
+    <min>0</min>
+    <max>20</max>
+    <explode>no</explode>
+    <dietypes>
+      <die>w6</die>
+    </dietypes>
+    <rule>norule</rule>
+    <comments>0</comments>
+  </wireset>
+  <wireset>
+    <tag>wod</tag>
+    <title>World of Darkness</title>
+    <description></description>
+    <image />
+    <active>1</active>
+    <display_order>2</display_order>
+    <count_dice>1</count_dice>
+    <sort_dice>1</sort_dice>
+    <calculate>no</calculate>
+    <min>0</min>
+    <max>14</max>
+    <explode>yes</explode>
+    <dietypes>
+      <die>w10</die>
+    </dietypes>
+    <rule>above</rule>
+    <comments>1</comments>
+  </wireset>
+  <wireset>
+    <tag>dsa</tag>
+    <title>Das Schwarze Auge</title>
+    <description />
+    <image />
+    <active>1</active>
+    <display_order>3</display_order>
+    <count_dice>1</count_dice>
+    <sort_dice>0</sort_dice>
+    <calculate>no</calculate>
+    <min>3</min>
+    <max>3</max>
+    <explode>no</explode>
+    <dietypes>
+      <die>w20</die>
+    </dietypes>
+    <rule>dsa</rule>
+    <comments>1</comments>
+  </wireset>
+  <wireset>
+    <tag>dsa5</tag>
+    <title>Das Schwarze Auge 5</title>
+    <description />
+    <image />
+    <active>1</active>
+    <display_order>3</display_order>
+    <count_dice>1</count_dice>
+    <sort_dice>0</sort_dice>
+    <calculate>no</calculate>
+    <min>3</min>
+    <max>3</max>
+    <explode>no</explode>
+    <dietypes>
+      <die>w20</die>
+    </dietypes>
+    <rule>dsa5</rule>
+    <comments>1</comments>
+  </wireset>
+  <wireset>
+    <tag>ore</tag>
+    <title>ORE</title>
+    <description />
+    <image />
+    <active>0</active>
+    <display_order>7</display_order>
+    <count_dice>1</count_dice>
+    <sort_dice>1</sort_dice>
+    <calculate>no</calculate>
+    <min>0</min>
+    <max>20</max>
+    <explode>no</explode>
+    <dietypes>
+      <die>w10</die>
+    </dietypes>
+    <rule>pairs</rule>
+    <comments>1</comments>
+  </wireset>
+  <wireset>
+    <tag>rullUnder</tag>
+    <title>Roll under</title>
+    <description>Rull your die below the number</description>
+    <image />
+    <active>0</active>
+    <display_order>9</display_order>
+    <count_dice>1</count_dice>
+    <sort_dice>0</sort_dice>
+    <calculate>no</calculate>
+    <min>0</min>
+    <max>10</max>
+    <explode>no</explode>
+    <dietypes>
+      <die>w10,w12,w20,w6,w8</die>
+    </dietypes>
+    <rule>norule</rule>
+    <comments>1</comments>
+  </wireset>
+  <wireset>
+    <tag>sw</tag>
+    <title>Savage Worlds</title>
+    <description></description>
+    <image />
+    <active>1</active>
+    <display_order>10</display_order>
+    <count_dice>1</count_dice>
+    <sort_dice>0</sort_dice>
+    <calculate>winning</calculate>
+    <min>0</min>
+    <max>10</max>
+    <explode>yes</explode>
+    <dietypes>
+      <die>w10,w12,w2,w20,w4,w6,w8</die>
+    </dietypes>
+    <rule>sw</rule>
+    <comments>0</comments>
+  </wireset>
+  <wireset>
+    <tag>dd3</tag>
+    <title>Dungeons and Dragons 3</title>
+    <description>DnD3.5, Pathfinder</description>
+    <image />
+    <active>1</active>
+    <display_order>10</display_order>
+    <count_dice>0</count_dice>
+    <sort_dice>0</sort_dice>
+    <calculate>no</calculate>
+    <min>1</min>
+    <max>1</max>
+    <explode>no</explode>
+    <dietypes>
+      <die>w20</die>
+    </dietypes>
+    <rule>d20</rule>
+    <comments>1</comments>
+  </wireset>
+  <wireset>
+    <tag>sr5</tag>
+    <title>Shadowrun 5</title>
+    <description />
+    <image />
+    <active>1</active>
+    <display_order>18</display_order>
+    <count_dice>1</count_dice>
+    <sort_dice>1</sort_dice>
+    <calculate>no</calculate>
+    <min>1</min>
+    <max>20</max>
+    <explode>no</explode>
+    <dietypes>
+      <die>w6</die>
+    </dietypes>
+    <rule>sr5</rule>
+    <comments>1</comments>
+  </wireset>
+  <wireset>
+    <tag>nwod</tag>
+    <title>new World of Darkness</title>
+    <description>use this Type of Die in New World of Darkness Games</description>
+    <image></image>
+    <active>1</active>
+    <display_order>20</display_order>
+    <count_dice>1</count_dice>
+    <sort_dice>0</sort_dice>
+    <calculate>no</calculate>
+    <min>0</min>
+    <max>20</max>
+    <explode>yes</explode>
+    <dietypes>
+      <die>w10</die>
+    </dietypes>
+    <rule>min</rule>
+    <comments>1</comments>
+  </wireset>
+  <wireset>
+    <tag>fate</tag>
+    <title>Fate</title>
+    <description>Roll Fate Dice</description>
+    <image />
+    <active>1</active>
+    <display_order>30</display_order>
+    <count_dice>1</count_dice>
+    <sort_dice>0</sort_dice>
+    <calculate>everytime</calculate>
+    <min>4</min>
+    <max>4</max>
+    <explode>no</explode>
+    <dietypes>
+      <die>fate</die>
+    </dietypes>
+    <rule>norule</rule>
+    <comments>0</comments>
+  </wireset>
+  <wireset>
+    <tag>rollOver</tag>
+    <title>Roll Above a Number</title>
+    <description />
+    <image />
+    <active>1</active>
+    <display_order>99</display_order>
+    <count_dice>1</count_dice>
+    <sort_dice>1</sort_dice>
+    <calculate>no</calculate>
+    <min>0</min>
+    <max>20</max>
+    <explode>no</explode>
+    <dietypes>
+      <die>w10,w100,w12,w2,w20,w4,w6,w8</die>
+    </dietypes>
+    <rule>above</rule>
+    <comments>0</comments>
+  </wireset>
+</wiresetlist>

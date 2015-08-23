@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<language title="Deutsch [Du]" date_format="j M Y" time_format="H:i" decimal_point="," thousands_separator="." language_code="de-DE" text_direction="LTR" addon_id="hRollDice">
+  <phrase title="admin_navigation_dm_category" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Würfel Manager]]></phrase>
+  <phrase title="admin_navigation_dm_dice" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Würfel Definition]]></phrase>
+  <phrase title="admin_navigation_dmrules" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Gewinnregeln]]></phrase>
+  <phrase title="admin_navigation_hDmOptions" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Würfel Einstellungen]]></phrase>
+  <phrase title="admin_navigation_hDmOverview" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Übersicht]]></phrase>
+  <phrase title="admin_navigation_hDmWiresets" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Systeme]]></phrase>
+  <phrase title="admin_permission_dicemanager" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Würfel Verwalten]]></phrase>
+  <phrase title="choose_your_dice" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Wähle die Würfel aus die du werfen willst.<br />
+Folgende Systeme sind verfügbar:]]></phrase>
+  <phrase title="dice_manager" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Würfeloptionen]]></phrase>
+  <phrase title="h_delete_now" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[jetzt löschen]]></phrase>
+  <phrase title="h_dm_RuleTag" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Tag]]></phrase>
+  <phrase title="h_dm_RuleTag_Desc" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Gib der Regel einen kurzen Identifizierungstag. Nur Buchstaben und Zahlen]]></phrase>
+  <phrase title="h_dm_RulesNotFound" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Kann die passende Regel nicht finden. Bitte überprüfe ob die Regel bereits importiert wurde.]]></phrase>
+  <phrase title="h_dm_WiresetActivate" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[ist dies System aktiv?]]></phrase>
+  <phrase title="h_dm_WiresetBuildSum" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[soll addiert werden?]]></phrase>
+  <phrase title="h_dm_WiresetDesc" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Kurzbeschreibung]]></phrase>
+  <phrase title="h_dm_WiresetDesc_Desc" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Gib hier eine kurze Beschreibung an, woifür das System gewürfelt wird. z.B. Das Schwarze Auge, Dungeons & Dragons oder Savage Worlds.]]></phrase>
+  <phrase title="h_dm_WiresetExplode" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[explodierende Würfel]]></phrase>
+  <phrase title="h_dm_WiresetImage" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Bild Pfad]]></phrase>
+  <phrase title="h_dm_WiresetImage_Desc" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Optionales Bild. Aktuell wird dies nur im ACP angezeigt.]]></phrase>
+  <phrase title="h_dm_WiresetMaxDice" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Maximale Würfel pro Wurf]]></phrase>
+  <phrase title="h_dm_WiresetMaxDice_Desc" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Weiviel Würfel können maximal gewürfelt werden.]]></phrase>
+  <phrase title="h_dm_WiresetMinDice" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Minimum Würfel]]></phrase>
+  <phrase title="h_dm_WiresetMinDice_Desc" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Mindestanzahl an Würfel pro Wurf.]]></phrase>
+  <phrase title="h_dm_WiresetNotFound" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Konnte System nicht laden...]]></phrase>
+  <phrase title="h_dm_WiresetOption" addon_id="hRollDice" version_id="129" version_string="Beta 5"><![CDATA[benötigte Optionen]]></phrase>
+  <phrase title="h_dm_WiresetOption_Desc" addon_id="hRollDice" version_id="129" version_string="Beta 5"><![CDATA[Wieviele Optionen (0-8) kann dies System haben? ]]></phrase>
+  <phrase title="h_dm_WiresetTag" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[System-Tag]]></phrase>
+  <phrase title="h_dm_WiresetTag_Desc" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Gib dem System ein kurzen Tag zur Identifikation. Nutze nur Buchstaben und Zahlen. z.B.: DSA, D20, W6]]></phrase>
+  <phrase title="h_dm_WiresetTitle" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Titel]]></phrase>
+  <phrase title="h_dm_WiresetTitle_Desc" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[gib dem System einen coolen Namen]]></phrase>
+  <phrase title="h_dm_WiresetUseRules" addon_id="hRollDice" version_id="129" version_string="Beta 5"><![CDATA[benutzt Gewinnregeln]]></phrase>
+  <phrase title="h_dm_activatedice_hint" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Aktiviert in diesem Knoten den Würfelbot mit allen Systemen.]]></phrase>
+  <phrase title="h_dm_add_new_die" addon_id="hRollDice" version_id="122" version_string="Beta 5"><![CDATA[neuen Würfel hinzufügen]]></phrase>
+  <phrase title="h_dm_add_new_rule" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[neue Regel  hinzufügen]]></phrase>
+  <phrase title="h_dm_add_new_wireset" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[neues System hinzufügen]]></phrase>
+  <phrase title="h_dm_all_dietypes" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[nutze alle aktiven Würfeltypen]]></phrase>
+  <phrase title="h_dm_all_wiresets" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[alle Systeme können gewürfelt werden]]></phrase>
+  <phrase title="h_dm_allowComments" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[erlaube Kommentare]]></phrase>
+  <phrase title="h_dm_and_have_x_winning_die" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[und hat {wins} Siegwürfel]]></phrase>
+  <phrase title="h_dm_avwiresets" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Alle verfügbaren Systeme die gewürfelt werden können]]></phrase>
+  <phrase title="h_dm_bulk_export" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[alle Exportieren]]></phrase>
+  <phrase title="h_dm_callback_hint" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Eine PHP Callback Klasse die als ersten Parameter die Informationen des Wurfs übergeben bekommt, und als zweiten Parameter ein Array mit den Optionen.]]></phrase>
+  <phrase title="h_dm_collapse_off" addon_id="hRollDice" version_id="122" version_string="Beta 5"><![CDATA[Zuklappen deaktiviert]]></phrase>
+  <phrase title="h_dm_collapse_on_closed" addon_id="hRollDice" version_id="122" version_string="Beta 5"><![CDATA[Aktiv, alle geschlossen]]></phrase>
+  <phrase title="h_dm_collapse_on_open" addon_id="hRollDice" version_id="122" version_string="Beta 5"><![CDATA[Aktiv, alle geöffnet]]></phrase>
+  <phrase title="h_dm_confirm_delete_die" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Bestätigen um Würfel zu löschen]]></phrase>
+  <phrase title="h_dm_confirm_delete_rule" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Du bist dabei flögende Regel zu löschen:]]></phrase>
+  <phrase title="h_dm_confirm_deletion_die" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Löschen des Würfels bestätigen]]></phrase>
+  <phrase title="h_dm_confirm_deletion_rule" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Löschen der Regel bestätigen]]></phrase>
+  <phrase title="h_dm_confirm_deletion_wireset" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Löschen des Systems bestätigen]]></phrase>
+  <phrase title="h_dm_count_dice" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Würfel zählen]]></phrase>
+  <phrase title="h_dm_count_winning_dice_in_roll" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Zähle alle Siegwürfel. Dies kann bei explodierenden Würfeln höher sein als die gewürfelten Würfel.]]></phrase>
+  <phrase title="h_dm_deleteRule" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[lösche diese Regel]]></phrase>
+  <phrase title="h_dm_deleteWireset" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[lösche System]]></phrase>
+  <phrase title="h_dm_delete_die" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[lösche diesen Würfel]]></phrase>
+  <phrase title="h_dm_delete_roll" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[diesen Würfelwurf löschen]]></phrase>
+  <phrase title="h_dm_delete_rule" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Diese Regel löschen?]]></phrase>
+  <phrase title="h_dm_delete_rule_title" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Regel löschen]]></phrase>
+  <phrase title="h_dm_delete_wireset" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[System löschen]]></phrase>
+  <phrase title="h_dm_dice" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Würfel]]></phrase>
+  <phrase title="h_dm_diceRuleActivate" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[ist die Regel aktiv?]]></phrase>
+  <phrase title="h_dm_diceRuleTitle" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Titel]]></phrase>
+  <phrase title="h_dm_diceRuleTitle_Desc" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Vergebe der Regel einen schönen Namen, damit du sie in der Systemkonfiguration leicht wieder findest.]]></phrase>
+  <phrase title="h_dm_dice_can_rolled_in_this_forum" addon_id="hRollDice" version_id="1000" version_string="RC 1"><![CDATA[In diesem Forum kann gewürfelt werden]]></phrase>
+  <phrase title="h_dm_dice_list" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Alle Würfel]]></phrase>
+  <phrase title="h_dm_dicecount_hint" addon_id="hRollDice" version_id="1000" version_string="RC 1"><![CDATA[Wieviel Würfel können gerollt werden?<br />
+Hinweis: Die übergeordnete Einstellung in den Optionen gibt das absolute Maximum an.]]></phrase>
+  <phrase title="h_dm_dicelist" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Würfel Definitionen im System]]></phrase>
+  <phrase title="h_dm_dicemanager" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Würfel Manager Übersicht]]></phrase>
+  <phrase title="h_dm_dicetypes" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Benutzt die folgenden Würfel]]></phrase>
+  <phrase title="h_dm_die_activate" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Ist dieser Würfel aktiv und kann benutzt werden?]]></phrase>
+  <phrase title="h_dm_die_activate_desc" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Wenn die Option deaktiviert ist, kann dieser Würfel nicht mehr benutzt werden. Alte Würfe mit diesem Typ werden aber noch korrekt angezeigt.]]></phrase>
+  <phrase title="h_dm_die_image" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Bild]]></phrase>
+  <phrase title="h_dm_die_image_desc" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Du kannst hier den Pfad zu einem Bild angeben welches im Würfelergebnis erscheint.]]></phrase>
+  <phrase title="h_dm_die_import" addon_id="hRollDice" version_id="122" version_string="Beta 5"><![CDATA[Eine Würfeldefinition importieren]]></phrase>
+  <phrase title="h_dm_die_not_found" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Der Würfel wurde nicht gefunden.<br />
+Ist er unter den Tisch gerollt?]]></phrase>
+  <phrase title="h_dm_die_sides" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Anzahl der Seiten]]></phrase>
+  <phrase title="h_dm_die_sides_desc" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Wieviel Seiten hat dieser Würfel? <br />
+Hier sind wir nicht an physikalische Grenzen begunden! ]]></phrase>
+  <phrase title="h_dm_die_tag_desc" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Gib einen eindeutigen Tag (Kürzel) ein, das den Würfel Identifiziert. z.B. w6 oder d10.]]></phrase>
+  <phrase title="h_dm_die_title" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Titel]]></phrase>
+  <phrase title="h_dm_die_title_desc" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Gib dem Würfen einen schönen Namen.]]></phrase>
+  <phrase title="h_dm_die_values" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Werte]]></phrase>
+  <phrase title="h_dm_die_values_desc" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Du kannst hier die möglichen Werte eingeben, die auf dem Würfel zu finden sind. Wenn das Feld leer gelassen wird, ist der Standard 1 bis Seitenanzahl.<br />
+Mögliche Optionen sind Kommaseparierte Werte und Bereiche sowie Kombinationen von beiden<br />
+Beispiel:<br />
+<strong>1-20</strong>: Setzt die Werte von 1 bis 20 auf den Würfel.<br />
+<strong>1-10,1-10</strong>: Setzt die Werte von 1 bis 10 je zwei mal auf den Würfel.<br />
+<strong>5*2,5*4,9*10,20</strong>:  Setzt fünf mal die zwei, fünf mal die vier, nein mal die 10 und die 20 auf den Würfel.]]></phrase>
+  <phrase title="h_dm_disabled" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Deaktiviert]]></phrase>
+  <phrase title="h_dm_display_order_Desc" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Die Reihenfolge wie die Systeme beim würfeln angezeigt werden.]]></phrase>
+  <phrase title="h_dm_do_import" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[XML Import starten]]></phrase>
+  <phrase title="h_dm_editDiceWireset" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Edit Dice Wireset]]></phrase>
+  <phrase title="h_dm_edit_die" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Würfel bearbeiten]]></phrase>
+  <phrase title="h_dm_edit_rule" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Regel bearbeiten]]></phrase>
+  <phrase title="h_dm_edit_wireset" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[System bearbeiten]]></phrase>
+  <phrase title="h_dm_enable_dice_in_this_forum" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[aktiviert das Würfeln in diesem Forum]]></phrase>
+  <phrase title="h_dm_enabled" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Aktiviert]]></phrase>
+  <phrase title="h_dm_error_maxdice" addon_id="hRollDice" version_id="129" version_string="Beta 5"><![CDATA[Bitte wähle ein Würfelmaximum aus.]]></phrase>
+  <phrase title="h_dm_error_mindice" addon_id="hRollDice" version_id="129" version_string="Beta 5"><![CDATA[Bitte wähle ein Würfelminimumm  aus.]]></phrase>
+  <phrase title="h_dm_error_nodietype" addon_id="hRollDice" version_id="129" version_string="Beta 5"><![CDATA[Keine Würfel ausgewählt]]></phrase>
+  <phrase title="h_dm_explode_double" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Die beiden höchsten Werte explodieren]]></phrase>
+  <phrase title="h_dm_explode_no" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[keine explodierenden Würfel]]></phrase>
+  <phrase title="h_dm_explode_once" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Explodiert einmal]]></phrase>
+  <phrase title="h_dm_explode_yes" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Der höchste Wurf  explodiert. Immer wieder. ]]></phrase>
+  <phrase title="h_dm_help_diceoverview" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Übersicht der Würfel]]></phrase>
+  <phrase title="h_dm_help_roll" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[In Themen und Beiträgen würfeln]]></phrase>
+  <phrase title="h_dm_help_roll_desc" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Klicke einfach auf den <span class="button">würfeln</span> Button unter dem Editor.]]></phrase>
+  <phrase title="h_dm_help_title" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Würfeln]]></phrase>
+  <phrase title="h_dm_helpmenu" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Würfeln]]></phrase>
+  <phrase title="h_dm_hint_delete_die" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Dieser Würfel wird auch aus allen Systemen gelöscht.<br />
+Vielleicht die Deaktiverung die bessere Idee?]]></phrase>
+  <phrase title="h_dm_hint_delete_rule" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Wenn du diese Regel löscht, werden evtl. Systeme nicht mehr korrekt funktionieren.<br />
+Systeme die diese Regel nutzen, werden dann keine Regeln mehr befolgen. Es kann zu Anzeigeproblemen bei bereits gewürfelten Ergebnissen kommen.]]></phrase>
+  <phrase title="h_dm_hint_delete_wireset" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Hinweis: Wenn du ein System löscht, Funktioiert die Ergebnisanzeige nicht mehr korrekt.]]></phrase>
+  <phrase title="h_dm_import_die" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[einen Würfel importieren]]></phrase>
+  <phrase title="h_dm_import_exists" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Das System existiert bereits]]></phrase>
+  <phrase title="h_dm_import_rules" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Regeln importieren]]></phrase>
+  <phrase title="h_dm_import_wireset" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[import System]]></phrase>
+  <phrase title="h_dm_install_social_dice" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Du hast das AddOn <em>Social Groups by Waindigo</em> installiert.<br />
+Du kannst auch mein Social Dice AddOn (erscheint in Kürze) installieren.]]></phrase>
+  <phrase title="h_dm_installed" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Installiert]]></phrase>
+  <phrase title="h_dm_invalid_rule_xml" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Ungültige Regel XML Datei]]></phrase>
+  <phrase title="h_dm_invalid_tag" addon_id="hRollDice" version_id="129" version_string="Beta 5"><![CDATA[Bitte gib einen gültigen Tag ein.]]></phrase>
+  <phrase title="h_dm_invalid_wireset_XML" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Die Datei enthält kein gültiges System]]></phrase>
+  <phrase title="h_dm_invalid_wireset_xml" addon_id="hRollDice" version_id="129" version_string="Beta 5"><![CDATA[Du hast ein ungültiges System-XML hochgeladen.]]></phrase>
+  <phrase title="h_dm_maybe_rolls_were_deleted" addon_id="hRollDice" version_id="129" version_string="Beta 5"><![CDATA[Du hast Beiträge mit insgesamt {count} Würfelwürfen ausgewählt. <br />
+Wenn der Zielbeitrag in einem Forum ist, indem nicht gewürfelt werden kann, werden alle {count} Würfelwürfe gelöscht.]]></phrase>
+  <phrase title="h_dm_moderator_log_delete_roll" addon_id="hRollDice" version_id="129" version_string="Beta 5"><![CDATA[Würfelwurf gelöscht ({roll_id})]]></phrase>
+  <phrase title="h_dm_noRule" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[keine Gewinnregel notwendig]]></phrase>
+  <phrase title="h_dm_no_of_dice" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Anzahl der Würfe innerhalb eines Beitrags]]></phrase>
+  <phrase title="h_dm_no_roll" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Du hast noch nicht gewürfelt.]]></phrase>
+  <phrase title="h_dm_no_wireset_use_this_rule" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Du hast Glück, kein System nutzt diese Regel. Du kannst sie gefahrlos löschen.]]></phrase>
+  <phrase title="h_dm_nodicewireset" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Noch keine Systeme erstellt...]]></phrase>
+  <phrase title="h_dm_norules" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[keine Regeln definiert]]></phrase>
+  <phrase title="h_dm_not_allowed_to_view_dice" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Du hast keine Rechte die Würfelergebnisse zu sehen.]]></phrase>
+  <phrase title="h_dm_not_rolled_yet" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Du hast bisher noch nicht gewürfelt.]]></phrase>
+  <phrase title="h_dm_optionlist" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Optionen für die Regel]]></phrase>
+  <phrase title="h_dm_options_dicecount" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Anzahl der Würfel]]></phrase>
+  <phrase title="h_dm_options_difficulty" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Schwierigkeit]]></phrase>
+  <phrase title="h_dm_options_dsa1" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Attribut 1]]></phrase>
+  <phrase title="h_dm_options_dsa2" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Attribut 2]]></phrase>
+  <phrase title="h_dm_options_dsa3" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Attribut 3]]></phrase>
+  <phrase title="h_dm_options_points" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Wert]]></phrase>
+  <phrase title="h_dm_overview" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Würfel Manager Übersicht]]></phrase>
+  <phrase title="h_dm_please_enter_tag_using_alphanumeric" addon_id="hRollDice" version_id="129" version_string="Beta 5"><![CDATA[Bitte gib einen Tag nur in alphanumerischer Schreibweise ein. Nur Buchstaben und Zahlen sind erlaubt. a-z und 0-9]]></phrase>
+  <phrase title="h_dm_protected" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[geschützt]]></phrase>
+  <phrase title="h_dm_protected_first" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[(Geschützte zuerst)]]></phrase>
+  <phrase title="h_dm_protected_rule" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Diese Regel ist geschützt.]]></phrase>
+  <phrase title="h_dm_protected_wireset" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Du kannst dieses geschützte System nicht löschen.<br />
+Es wird als Basis-Set benötigt damit überhaupt gewürfelt werden kann.]]></phrase>
+  <phrase title="h_dm_protected_wireset_desc" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[<strong>Dies System ist geschützt.</strong><br />
+Manche Systeme sind geschützt für interne benutzung. Nur einige der Felder können für den eigenen Zweck verändert werden.]]></phrase>
+  <phrase title="h_dm_really_delete_roll" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Willst du diesen Würfelwurf wirklich löschen?]]></phrase>
+  <phrase title="h_dm_roll_dice" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Würfel benutzen]]></phrase>
+  <phrase title="h_dm_roll_dicetypes" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Du kannst einfache Würfel ohne Regeln werfen.]]></phrase>
+  <phrase title="h_dm_roll_in_thread_x" addon_id="hRollDice" version_id="129" version_string="Beta 5"><![CDATA[Würfelwurf {comment} im Thema  '{title}']]></phrase>
+  <phrase title="h_dm_roll_now" addon_id="hRollDice" version_id="1000" version_string="RC 1"><![CDATA[jetzt würfeln]]></phrase>
+  <phrase title="h_dm_rolled_x" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[{wireset} gewürfelt]]></phrase>
+  <phrase title="h_dm_rolled_x_for_y" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[{wireset} für {for} gewürfelt]]></phrase>
+  <phrase title="h_dm_rulelist" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Alle Regeln]]></phrase>
+  <phrase title="h_dm_rules" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Regeln und Würfeloptionen]]></phrase>
+  <phrase title="h_dm_rules_list" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Regel Übersicht]]></phrase>
+  <phrase title="h_dm_saveWireset" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[System speichern]]></phrase>
+  <phrase title="h_dm_save_and_child" addon_id="hRollDice" version_id="1000" version_string="RC 1"><![CDATA[Speicher das Forum und übertrage Würfel auf Kindeelemente]]></phrase>
+  <phrase title="h_dm_save_die" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Würfel speichern]]></phrase>
+  <phrase title="h_dm_select_rule" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Regel auswählen]]></phrase>
+  <phrase title="h_dm_selected_dietypes" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Nutze die folgenden Würfel]]></phrase>
+  <phrase title="h_dm_selected_wiresets" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Nur die folgenden Systeme können benutzt werden]]></phrase>
+  <phrase title="h_dm_sides" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Werte auf den Seiten des Würfels]]></phrase>
+  <phrase title="h_dm_sort_dice" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Ergebnis sortieren]]></phrase>
+  <phrase title="h_dm_sort_dice_in_roll" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Aufsteigend sortieren<br />
+<em>Wenn du den Folgewürfel bei explodierenden Würfeln benötigst, lasse dies deaktiviert.</em>]]></phrase>
+  <phrase title="h_dm_stats_posts_rolls" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Beiträge mit Würfelwürfen]]></phrase>
+  <phrase title="h_dm_stats_rolled_wiresets" addon_id="hRollDice" version_id="133" version_string="Beta 5"><![CDATA[Benutzte Systeme]]></phrase>
+  <phrase title="h_dm_stats_rolls" addon_id="hRollDice" version_id="133" version_string="Beta 5"><![CDATA[Würfelwürfe]]></phrase>
+  <phrase title="h_dm_stats_rolls_wins" addon_id="hRollDice" version_id="133" version_string="Beta 5"><![CDATA[gewonnene Würfe]]></phrase>
+  <phrase title="h_dm_sum_everytime" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Alle Würfel zusammenzählen]]></phrase>
+  <phrase title="h_dm_sum_no" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[nicht zählen]]></phrase>
+  <phrase title="h_dm_sum_winning" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[die Siegwürfel zusammenzählen]]></phrase>
+  <phrase title="h_dm_sum_winning_explode" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Siegwürfel und Explodirenden inkl. folgendem Würfel zusammenzählen]]></phrase>
+  <phrase title="h_dm_tag_contain_more_numbers_hyphen" addon_id="hRollDice" version_id="129" version_string="Beta 5"><![CDATA[Ein Tag muss mehr als nur Zahlen enthalten.]]></phrase>
+  <phrase title="h_dm_this_wiresets_use_this_rule" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Die folgenden Systeme nutzen diese Regel]]></phrase>
+  <phrase title="h_dm_unknown_roll_id" addon_id="hRollDice" version_id="129" version_string="Beta 5"><![CDATA[Unbekannter Würfelwurf (ID)]]></phrase>
+  <phrase title="h_dm_usable_dietypes" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Würfel wählen]]></phrase>
+  <phrase title="h_dm_usable_wiresets" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Benutzbare Systeme]]></phrase>
+  <phrase title="h_dm_usable_wiresets_Desc" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Wähle die Systeme aus, die in diesem Forum gewürfelt werden dürfen.]]></phrase>
+  <phrase title="h_dm_wiremanagericon" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Würfelsystem Übersicht]]></phrase>
+  <phrase title="h_dm_wireset" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[System]]></phrase>
+  <phrase title="h_dm_wireset_basics" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Grundeinstellungen]]></phrase>
+  <phrase title="h_dm_wireset_rules" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Sieg Regeln]]></phrase>
+  <phrase title="h_dm_wireset_specials" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Spezielle Systeme]]></phrase>
+  <phrase title="h_dm_wiresetlist" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Alle Systeme]]></phrase>
+  <phrase title="h_dm_wiresets" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Systeme]]></phrase>
+  <phrase title="h_dm_with_dice_rolls" addon_id="hRollDice" version_id="1000" version_string="RC 1"><![CDATA[mit Würfeln]]></phrase>
+  <phrase title="h_dm_with_this_sum" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[und sammeltest {sum} Augen.]]></phrase>
+  <phrase title="h_dm_xenmig_latestroll" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Letzter Würfelwurf]]></phrase>
+  <phrase title="h_dm_you_cant_roll" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Du kannst hier und jetzt nicht würfel. <br />
+<em>Vielleicht ist deine Zeit um?</em>]]></phrase>
+  <phrase title="h_dm_you_rolled" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Du hast geworfen:]]></phrase>
+  <phrase title="h_dm_your_roll_in_thread_x_was_deleted" addon_id="hRollDice" version_id="129" version_string="Beta 5"><![CDATA[Dein Würfelwurf <em>{roll}</em> in deinem <a href="{postlink}">Beitrag</a> im Thema  {title} wurde gelöscht.]]></phrase>
+  <phrase title="option_dice_roll_in" addon_id="hRollDice" version_id="1000" version_string="RC 1"><![CDATA[Würfel in ... ]]></phrase>
+  <phrase title="option_dice_roll_in_explain" addon_id="hRollDice" version_id="116" version_string="Beta 4"><![CDATA[An diesen Stellen kann gewürfelt werden.<br />
+Du kannst detaillierte Einstelelungen in den Benutzergruppen vornehmen.]]></phrase>
+  <phrase title="option_group_hDice" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Würfel Manager]]></phrase>
+  <phrase title="option_group_hDice_description" addon_id="hRollDice" version_id="118" version_string="Beta 3.2"><![CDATA[Alle Einstellungen zum Würfeln]]></phrase>
+  <phrase title="option_hCollapseDiceInPost" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Würfelwurf im Beitrag zusammenklappen]]></phrase>
+  <phrase title="option_hCollapseDiceInPost_explain" addon_id="hRollDice" version_id="122" version_string="Beta 5"><![CDATA[Mit dieser Option wird das einklappen der Würfe gesteuert.<br />
+Standardmässig eingeklappt uist nur das Ergebnis ist direkt sichtbar. <br />
+Nach einem Klick kann der User dann alle Würfel sehen.<br />
+Diese Option kann jede Menge Platz sparen, aber für die Details muss der User einmal klicken.]]></phrase>
+  <phrase title="option_hEnableBackwardCompatibility" addon_id="hRollDice" version_id="116" version_string="Beta 4"><![CDATA[Kompatibilitätsmodus aktivieren]]></phrase>
+  <phrase title="option_hEnableBackwardCompatibility_explain" addon_id="hRollDice" version_id="116" version_string="Beta 4"><![CDATA[Aktivier diese Option, wenn du aus meinem alten vBulletin AddOn Würfelwürfe importiert hast.]]></phrase>
+  <phrase title="option_hKeyDice" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Schlüssel für Würfel Manager]]></phrase>
+  <phrase title="option_hKeyDice_explain" addon_id="hRollDice" version_id="135" version_string="Beta 5"><![CDATA[Kontrollkästchen aktivieren, wenn du einen Key erstellen lassen willst.<br /><br />
+<p class="explain">Diese Software Key wird von Hoffi's Server erstellt. Wenn dies nicht funktioniert. kontaktiere Hoffi bei <a href="http://www.xenforo.com/community/">XenForo.com</a> oder <a href="http://www.xendach.de"> XenDACH.de</a>.<br />
+Es wird nur das AddOn, die Domain und die Server-IP an den Dienst übertragen. Falls die Verbindung fehl schlägt, zieht dies keine Einschränkung nach sich. Das AddOn funktioniert auch ohne Key.</p>]]></phrase>
+  <phrase title="option_hMaximumRollsPerPost" addon_id="hRollDice" version_id="1000" version_string="RC 1"><![CDATA[Absolutes Wurfmaximum]]></phrase>
+  <phrase title="option_hMaximumRollsPerPost_explain" addon_id="hRollDice" version_id="1000" version_string="RC 1"><![CDATA[Die maximale Anzahl an Würfen/System die in eiunem Beitrag gewürfel werden können.]]></phrase>
+  <phrase title="option_hOverallMaxDice" addon_id="hRollDice" version_id="1000" version_string="RC 1"><![CDATA[Maximale Anzahl an Würfeln]]></phrase>
+  <phrase title="option_hOverallMaxDice_explain" addon_id="hRollDice" version_id="1000" version_string="RC 1"><![CDATA[Hier kannst du das absolute Maximum an Würfen für ein Beitrag einstellen.<br />
+Pro System kann diese Zahl gesenkt werden, aber nicht erhöht. ]]></phrase>
+  <phrase title="permission_forum_can_delete_diceroll_post" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Kann jeden Würfelwurf löschen]]></phrase>
+  <phrase title="permission_forum_can_roll_dice_post" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Kann in Beiträgen würfeln]]></phrase>
+  <phrase title="permission_forum_can_see_dice_post" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Kann Würfelwürfe in Beitrag sehen]]></phrase>
+  <phrase title="style_property_group_DiceManager_admin" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Würfel Manager]]></phrase>
+  <phrase title="style_property_group_hDiceManager_master" addon_id="hRollDice" version_id="114" version_string="Beta 3"><![CDATA[Würfel Manager]]></phrase>
+</language>

@@ -1,0 +1,146 @@
+<html>
+<head>
+	<title>[h] Dice Manager - Instructions</title>
+	<link rel='stylesheet' id='decode-font-stylesheet-css'  href='https://fonts.googleapis.com/css?family=Oxygen&#038;ver=4.1.1' type='text/css' media='all' />
+<style>
+body { background: #ECF0F1; margin:0; padding: 0; font-family: Oxygen, Verdana, sans-serif; font-size: 12pt;}
+div.fixHeading { position: fixed; border-bottom: 2px solid #85af34; background-color: silver; color: navy; width: 100%; padding: 0 20px; height: 100px;}
+div.fixHeading h1 { text-shadow: 2px 2px 3px rgba(150, 150, 150, 1); font-size: 2em; margin: 10px;}
+ul.topmenu { width: 100%; font-weight: bold; }
+ul.topmenu li { float: left; list-style-item: no-item; margin-right: 10px; padding: 2px 5px; border: 1px solid transparent;}
+ul.topmenu li:hover { border: 1px solid #85af34; border-radius: 5px; }
+
+div.content { margin: 0 20px; padding-bottom: 100px; }
+
+div.chapter {
+padding-top: 100px;
+	border-radius: 20px;
+	margin-bottom: 40px;
+}
+
+div.chapter img {
+	border: 1px dotted white;
+	transform: scale(5);
+}
+
+div.chapter h2 {
+	border-bottom: 1px dotted #85af34;
+	text-shadow: 2px 2px 3px rgba(150, 150, 150, 1);
+	width: 50%;
+}
+a { text-decoration: none; color: #85af34; }
+
+div.fixedFooter { border-top: 1px solid black; position: fixed; font-size: 0.9em; bottom: 0; width: 100%; padding: 5px; background-color: white;}
+</style>
+</head>
+<body>
+<div class="fixHeading">
+	<h1>[h] Dice Manager</h1>
+	<ul class="topmenu">
+		<li><a href="#info">Informationen</a></li>
+		<li><a href="#inst">Installation</a></li>
+		<li><a href="#options">Einstellungen</a></li>
+		<li><a href="#usergroup">Benutzergruppen</a></li>
+		<li><a href="#dice">Würfel</a></li>
+		<li><a href="#rules">Regeln</a></li>
+		<li><a href="#wiresets">Systeme</a></li>
+		<li><a href="#forum">Foren</a></li>
+		<li><a href="#usage">Benutzung</a></li>
+		<li><a href="#style">Styling</a></li>
+		<li><a href="#credits">Credits</a></li>
+	</u>
+</div>
+<div class="content">
+
+<div id="info" class="chapter">
+	<h2>Informationen</h2>
+	<p>This Dice Manager from Hoffi is an awesome Tool, which is used to roll Dice.</p>
+	<p>In the AdminCP the Admin can add and edit dice, rules and wiresets (RPG Systems like D&D) with easy and complex rules. All can be ex- and imported.</p>
+	<p>You can do much more, than roll a simmple d10 inside a post. You can roll your attack roll with your skill and the system will tell you, it your roll was a success.</p>
+	<p>Inside your post the rolls are displayed and can be collapsed to save space.</p>
+	<p>I developed this addon very integrated into the XenForo System, so you can use Alerts, Moderation log, Admin Search, statistics and more.</p>
+	<p>Please give me Feedback at XenDACH.de or XenForo.com</p>
+</div>
+
+<div id="inst" class="chapter">
+	<h2>Installation</h2>
+	<p>It's really easy. Simple du this few steps:</p>
+	<ol>
+		<li>Upload all files from the upload directory to the corresponding directory on your server.</li>
+		<li>Install the XML AddOn File.</xml>
+		<li>After that follow the next steps in this instructions for your first Setup.</li>
+	</ol>
+</div>
+
+<div id="options" class="chapter">
+	<h2>Settings</h2>
+	<p>The Basic Settings are some few self explaining settings.</p>
+	<p>At the Bottom is a field for a system Key. If you save the settings with activated "fetch key" option, the system will contact my server and send back a key. Only the URL, the AddOn and the AddOn Version will be transferred to my server.</p>
+	<p>The key is only an information for me, the addon will ever work without a license key with all options. If you don't want to fetch a key, so don't so it and enjoy the AddOn without.</p>
+	<p>If you get e key once, at every update the new Version will be promoted to my. But I have only the actual Information. I store no history or any personal data.</p>
+</div>
+
+<div id="usergroup" class="chapter">
+	<h2>Usergroups</h2>
+	<p>There are three new rights for usergroups:</p>
+	<ul>
+		<li>Can roll dice</li>
+		<li>Can see rolled dice</li>
+		<li>can delte every dice roll (moderative rights)</li>
+	</ul>
+	<p>There is no right, that a user can delete own rolls, to prevent misbehaviour.</p>
+</div>
+
+<div id="dice" class="chapter">
+	<h2>Dice</h2>
+	<p>First, you mus create dice. In theimport folder you can import a pre-Set of dice. You must use all three import files from one language to get the system to work.</p>
+	<p>You can edit every attribute of the die after the import, but not the tag like d6.</p>
+	<p>If you want to change the icon of an image, upload your own. You can use individual Images per Style.</p>
+</div>
+
+<div id="rules" class="chapter">
+	<h2>Rules</h2>
+	<p>Import the rules from the same language as the dice. You can add your own rules.</p>
+	<p>The rules define, if a roll is won or not.</p>
+</div>
+
+<div id="wiresets" class="chapter">
+	<h2>Wireframes</h2>
+	<p>After you imported dice and rules, you can import the wireframes in the same language. Wireframes are the Dice System, like World of Darkness or Dungeons and Dragons.</p>
+	<p>Just take a look at the wireframes, create your own and share them. There is an export function.</p>
+</div>
+
+<div id="forum" class="chapter">
+	<h2>Forums</h2>
+	<p>Now its time, to tell your fourms, to acced dice rolls. Edit the Node and you see a new tab with additions informations for the dice settings.</p>
+	<p>If you have installed many wireframes, you can select individual wireframes that can be rolled per forum.</p>
+</div>
+
+<div id="usage" class="chapter">
+	<h2>Usage</h2>
+	<p>Phew. Now you can roll in your posts. This wa a lot of work, but your users will thank you!</p>
+	<p>If you activated the new style propertiy to show rollabe icon in the node list, you can select a forum in which can rolled.</p>
+	<p>Just create a thread, or add a reply and click on the new button that appears on the bottom of the editor if you enabled this type of posting. The a dialog appears and you can set the roll options. Hit roll. <br />Hint: Only the active tab can rolled.</p>
+	<p>Moderators can delete rolls, if you activated this. They can add an alert for the users.</p>
+</div>
+
+
+<div id="style" class="chapter">
+	<h2>Styling</h2>
+	<p>There are new style settings for the dice manager. So you can indidualize the look and feel of all dice and icons.</p>
+</div>
+
+
+<div id="credits" class="chapter">
+	<h2>Credits</h2>
+	<p>The 6sided die Icon is from http://www.icon-king.com/.</p>
+	<p>The dice backgrounds are my little work. I added the source file. Feel free to modify them to your wish.</p>
+</div>
+
+</div>
+
+<div class="fixedFooter">
+&copy; 2015 by Hoffi
+</div>
+</body>
+</html>

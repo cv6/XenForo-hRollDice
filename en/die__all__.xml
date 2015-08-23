@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dice>
+  <die>
+    <tag>coin</tag>
+    <title>coin flip</title>
+    <image/>
+    <active>0</active>
+    <x_sided_die>2</x_sided_die>
+    <values>face,number</values>
+  </die>
+  <die>
+    <tag>d10</tag>
+    <title>10 Seitiger Würfel</title>
+    <image>styles/default/hoffi/dice/d10.png</image>
+    <active>1</active>
+    <x_sided_die>10</x_sided_die>
+    <values/>
+  </die>
+  <die>
+    <tag>d100</tag>
+    <title>100sided</title>
+    <image/>
+    <active>1</active>
+    <x_sided_die>100</x_sided_die>
+    <values/>
+  </die>
+  <die>
+    <tag>d12</tag>
+    <title>12sided die</title>
+    <image>styles/default/hoffi/dice/d12.png</image>
+    <active>1</active>
+    <x_sided_die>12</x_sided_die>
+    <values/>
+  </die>
+  <die>
+    <tag>d2</tag>
+    <title>2sided die</title>
+    <image/>
+    <active>1</active>
+    <x_sided_die>2</x_sided_die>
+    <values/>
+  </die>
+  <die>
+    <tag>d20</tag>
+    <title>20sided die</title>
+    <image>styles/default/hoffi/dice/d20.png</image>
+    <active>1</active>
+    <x_sided_die>20</x_sided_die>
+    <values/>
+  </die>
+  <die>
+    <tag>d4</tag>
+    <title>4sided die</title>
+    <image>styles/default/hoffi/dice/d4.png</image>
+    <active>1</active>
+    <x_sided_die>4</x_sided_die>
+    <values>1-4</values>
+  </die>
+  <die>
+    <tag>d6</tag>
+    <title>6sided die</title>
+    <image>styles/default/hoffi/dice/d6.png</image>
+    <active>1</active>
+    <x_sided_die>6</x_sided_die>
+    <values/>
+  </die>
+  <die>
+    <tag>d8</tag>
+    <title>8sided die</title>
+    <image>styles/default/hoffi/dice/d8.png</image>
+    <active>1</active>
+    <x_sided_die>8</x_sided_die>
+    <values/>
+  </die>
+  <die>
+    <tag>fate</tag>
+    <title>Fate Die</title>
+    <image/>
+    <active>1</active>
+    <x_sided_die>3</x_sided_die>
+    <values>-1,0,1</values>
+  </die>
+</dice>
