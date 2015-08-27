@@ -32,10 +32,16 @@ class Hoffi_DM_Model_DiceManager_Post extends XFCP_Hoffi_DM_Model_DiceManager_Po
 	{
 		$parent = parent::preparePostJoinOptions($fetchOptions);
 
-		$parent['selectFields'] .= ',
-            xf_hoffi_dm_rolls.roll_id as roll_id';
-		$parent['joinTables'] .= '
-            LEFT JOIN xf_hoffi_dm_rolls ON (post.post_id = xf_hoffi_dm_rolls.post_id)';
+		if (!empty($fetchOptions['join']))
+		{
+			if ($fetchOptions['join'] & self::FETCH_THREAD || $fetchOptions['join'] & self::FETCH_FORUM || $fetchOptions['join'] & self::FETCH_NODE_PERMS)
+			{
+				$parent['selectFields'] .= ',
+					xf_hoffi_dm_rolls.roll_id as roll_id';
+				$parent['joinTables'] .= '
+					LEFT JOIN xf_hoffi_dm_rolls ON (post.post_id = xf_hoffi_dm_rolls.post_id)';
+			}
+		}
 
 		return $parent;
 	}
@@ -59,7 +65,7 @@ class Hoffi_DM_Model_DiceManager_Post extends XFCP_Hoffi_DM_Model_DiceManager_Po
 		$postsWithDice = array();
 		foreach ($posts AS $postId => &$post)
 		{
-			if ($post['roll_id'])
+			if (!empty($post['roll_id']))
 			{
 				$postsWithDice[] = $postId;
 			}
@@ -75,12 +81,12 @@ class Hoffi_DM_Model_DiceManager_Post extends XFCP_Hoffi_DM_Model_DiceManager_Po
 
 	public function preparePost(array $post, array $thread, array $forum, array $nodePermissions = null, array $viewingUser = null)
 	{
-		$roll_id = $post['roll_id'];
-		$post['hasDice'] = (bool)$roll_id;
+		$post['hasDice'] = !empty($post['roll_id']);
 		$post['canViewDice'] = $this->canSeeDiceRoll($post, $thread, $forum, $nodePermissions, $viewingUser);
 		$post['canDeleteDice'] = $this->canDeleteDiceRoll($post, $thread, $forum, $nodePermissions, $viewingUser);
 		if ($post['hasDice'])
 		{
+            $roll_id = $post['roll_id'];
 			// fetch from cache if exists
 			if (isset($this->_rolls[$roll_id]))
 			{
