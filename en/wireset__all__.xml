@@ -20,9 +20,9 @@
     <comments>0</comments>
   </wireset>
   <wireset>
-    <tag>w6</tag>
-    <title>Standard W6</title>
-    <description>the normal W6</description>
+    <tag>d6</tag>
+    <title>Standard D6</title>
+    <description>the normal D6</description>
     <image/>
     <active>1</active>
     <display_order>2</display_order>
@@ -117,7 +117,7 @@
   <wireset>
     <tag>rullUnder</tag>
     <title>Roll under</title>
-    <description>Rull your die below the number</description>
+    <description>Roll below a number</description>
     <image/>
     <active>1</active>
     <display_order>9</display_order>
@@ -136,7 +136,7 @@
   <wireset>
     <tag>sw</tag>
     <title>Savage Worlds</title>
-    <description>Use this set, for SavagwWorlds</description>
+    <description>Use this set for Savage Worlds</description>
     <image/>
     <active>1</active>
     <display_order>10</display_order>
@@ -193,7 +193,7 @@
   <wireset>
     <tag>nwod</tag>
     <title>new World of Darkness</title>
-    <description>use this Type of Die in New World of Darkness Games</description>
+    <description>Use this Type of Die in New World of Darkness Games</description>
     <image>styles/default/hoffi/wiresets/nwod.jpg</image>
     <active>1</active>
     <display_order>20</display_order>
@@ -230,7 +230,7 @@
   </wireset>
   <wireset>
     <tag>rollOver</tag>
-    <title>Roll Above a Number</title>
+    <title>Roll above a number</title>
     <description/>
     <image/>
     <active>1</active>
