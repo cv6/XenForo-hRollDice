@@ -172,7 +172,7 @@ div.hoffi_key {
 
 {xen:adminpagenav $perPage, $totalDice, $page, dm-dice, $dice}]]></template>
     <template title="hoffi_dm_forumoptions"><![CDATA[<li>
-<xen:checkboxunit label="{xen:phrase h_dm_enable_dice_in_this_forum}">
+<xen:checkboxunit label="">
 	<xen:option name="h_dm_allowdiceroll" label="{xen:phrase h_dm_enable_dice_in_this_forum}" selected="{$forum.h_dm_allowdiceroll}">
 		<xen:hint>{xen:phrase h_dm_activatedice_hint}</xen:hint>
 	</xen:option>
@@ -803,245 +803,254 @@ max=10</edit_format_params>
     <interface_groups/>
   </permissions>
   <phrases>
-    <phrase title="admin_navigation_dmrules" version_id="1" version_string="1.0"><![CDATA[Winning Rules]]></phrase>
+    <phrase title="admin_navigation_dmrules" version_id="1" version_string="1.0"><![CDATA[Rules]]></phrase>
     <phrase title="admin_navigation_dm_category" version_id="1" version_string="1.0"><![CDATA[Dice Manager]]></phrase>
-    <phrase title="admin_navigation_dm_dice" version_id="1" version_string="1.0"><![CDATA[Dice definitions]]></phrase>
-    <phrase title="admin_navigation_hDmOptions" version_id="62" version_string="Beta"><![CDATA[Dice Manager Options]]></phrase>
-    <phrase title="admin_navigation_hDmOverview" version_id="62" version_string="Beta"><![CDATA[Overview]]></phrase>
-    <phrase title="admin_navigation_hDmWiresets" version_id="62" version_string="Beta"><![CDATA[Wiresets]]></phrase>
-    <phrase title="admin_permission_dicemanager" version_id="1" version_string="1.0"><![CDATA[Manage Dice]]></phrase>
-    <phrase title="choose_your_dice" version_id="1" version_string="1.0"><![CDATA[Choose the type of dice you want to roll.<br />
-The following Sets are avaiable:]]></phrase>
+    <phrase title="admin_navigation_dm_dice" version_id="1048" version_string="RC 2"><![CDATA[Dice Definition]]></phrase>
+    <phrase title="admin_navigation_hDmOptions" version_id="1048" version_string="RC 2"><![CDATA[Dice Options]]></phrase>
+    <phrase title="admin_navigation_hDmOverview" version_id="1048" version_string="RC 2"><![CDATA[Overview]]></phrase>
+    <phrase title="admin_navigation_hDmWiresets" version_id="1048" version_string="RC 2"><![CDATA[Systems]]></phrase>
+    <phrase title="admin_permission_dicemanager" version_id="1048" version_string="RC 2"><![CDATA[Dice Management]]></phrase>
+    <phrase title="choose_your_dice" version_id="1048" version_string="RC 2"><![CDATA[Choose the dice to roll.<br />
+The following systems are available:]]></phrase>
     <phrase title="cron_entry_hDeleteUnassignedRolls" version_id="1" version_string="1.0"><![CDATA[Delete unassigned Dice Rolls]]></phrase>
     <phrase title="custom_bb_code_dice_desc" version_id="56" version_string="Beta"><![CDATA[roll a Dice]]></phrase>
     <phrase title="custom_bb_code_dice_title" global_cache="1" version_id="56" version_string="Beta"><![CDATA[Dice roll]]></phrase>
-    <phrase title="dice_manager" version_id="1" version_string="1.0"><![CDATA[Dice Options]]></phrase>
+    <phrase title="dice_manager" version_id="1048" version_string="RC 2"><![CDATA[Dice Manager Options]]></phrase>
     <phrase title="h_delete_now" version_id="56" version_string="Beta"><![CDATA[Delete now]]></phrase>
-    <phrase title="h_dm_activatedice_hint" version_id="1" version_string="1.0"><![CDATA[Activate the Dice Roller including  the use of all wiresets in this node.]]></phrase>
-    <phrase title="h_dm_add_new_die" version_id="72" version_string="Beta"><![CDATA[add new die]]></phrase>
-    <phrase title="h_dm_add_new_rule" version_id="72" version_string="Beta"><![CDATA[add new rule]]></phrase>
-    <phrase title="h_dm_add_new_wireset" version_id="72" version_string="Beta"><![CDATA[add new wireset]]></phrase>
-    <phrase title="h_dm_allowComments" version_id="72" version_string="Beta"><![CDATA[allow comments for a roll]]></phrase>
-    <phrase title="h_dm_all_dietypes" version_id="72" version_string="Beta"><![CDATA[Use all active die-types]]></phrase>
-    <phrase title="h_dm_all_wiresets" version_id="107" version_string="Beta 2"><![CDATA[All wiresets can be rolled]]></phrase>
-    <phrase title="h_dm_and_have_x_winning_die" version_id="72" version_string="Beta"><![CDATA[and have {wins} winning dice]]></phrase>
-    <phrase title="h_dm_avwiresets" version_id="114" version_string="Beta 3"><![CDATA[Avaiable Wiresets that can be rolled]]></phrase>
-    <phrase title="h_dm_bulk_export" version_id="114" version_string="Beta 3"><![CDATA[export all]]></phrase>
-    <phrase title="h_dm_callback_hint" version_id="72" version_string="Beta"><![CDATA[The roll data will be passed as the first parameter.<br />
-The options will be passed as an array as the second parameter.]]></phrase>
-    <phrase title="h_dm_collapse_off" version_id="122" version_string="Beta 5"><![CDATA[No collapse possible]]></phrase>
-    <phrase title="h_dm_collapse_on_closed" version_id="122" version_string="Beta 5"><![CDATA[On, default closed]]></phrase>
-    <phrase title="h_dm_collapse_on_open" version_id="122" version_string="Beta 5"><![CDATA[On, default open]]></phrase>
-    <phrase title="h_dm_confirm_delete_die" version_id="72" version_string="Beta"><![CDATA[Confirm to delete die:]]></phrase>
-    <phrase title="h_dm_confirm_delete_rule" version_id="114" version_string="Beta 3"><![CDATA[You are going to delete the following rule:]]></phrase>
-    <phrase title="h_dm_confirm_deletion_die" version_id="72" version_string="Beta"><![CDATA[Confirm Deletion of this die]]></phrase>
-    <phrase title="h_dm_confirm_deletion_rule" version_id="72" version_string="Beta"><![CDATA[Confirm Deletion of Winningn Rule]]></phrase>
-    <phrase title="h_dm_confirm_deletion_wireset" version_id="72" version_string="Beta"><![CDATA[Confirm Deletion of Wireset]]></phrase>
-    <phrase title="h_dm_count_dice" version_id="72" version_string="Beta"><![CDATA[Count Dice]]></phrase>
-    <phrase title="h_dm_count_winning_dice_in_roll" version_id="72" version_string="Beta"><![CDATA[Count all winning dice. This can be higher that rolled dice, if they explode.]]></phrase>
-    <phrase title="h_dm_deleteRule" version_id="72" version_string="Beta"><![CDATA[delete this rule]]></phrase>
-    <phrase title="h_dm_deleteWireset" version_id="72" version_string="Beta"><![CDATA[delete Wireset]]></phrase>
-    <phrase title="h_dm_delete_die" version_id="72" version_string="Beta"><![CDATA[delete this die]]></phrase>
-    <phrase title="h_dm_delete_roll" version_id="56" version_string="Beta"><![CDATA[Delete this roll]]></phrase>
-    <phrase title="h_dm_delete_rule" version_id="72" version_string="Beta"><![CDATA[Delete this winning rule?]]></phrase>
-    <phrase title="h_dm_delete_rule_title" version_id="114" version_string="Beta 3"><![CDATA[Delete Rule]]></phrase>
-    <phrase title="h_dm_delete_wireset" version_id="72" version_string="Beta"><![CDATA[delete wireset]]></phrase>
-    <phrase title="h_dm_dice" version_id="64" version_string="Beta"><![CDATA[Dice]]></phrase>
-    <phrase title="h_dm_dicecount_hint" version_id="1" version_string="1.0"><![CDATA[How many dice can be rolled.<br />
-Hint: Set the overall maximun count for all forums in the main options.]]></phrase>
-    <phrase title="h_dm_dicelist" version_id="72" version_string="Beta"><![CDATA[Die definitions in system]]></phrase>
-    <phrase title="h_dm_dicemanager" version_id="72" version_string="Beta"><![CDATA[Dice Manager Overview]]></phrase>
-    <phrase title="h_dm_diceRuleActivate" version_id="72" version_string="Beta"><![CDATA[is this rule active?]]></phrase>
-    <phrase title="h_dm_diceRuleTitle" version_id="72" version_string="Beta"><![CDATA[Rule Title]]></phrase>
-    <phrase title="h_dm_diceRuleTitle_Desc" version_id="72" version_string="Beta"><![CDATA[enter a good name to identify this rule later in the wiresets.]]></phrase>
-    <phrase title="h_dm_dicetypes" version_id="72" version_string="Beta"><![CDATA[Use the follwing dice]]></phrase>
-    <phrase title="h_dm_dice_can_rolled_in_this_forum" version_id="1000" version_string="RC 1"><![CDATA[In this Forum you can roll dice]]></phrase>
-    <phrase title="h_dm_dice_list" version_id="72" version_string="Beta"><![CDATA[All Dice]]></phrase>
-    <phrase title="h_dm_die_activate" version_id="72" version_string="Beta"><![CDATA[is this die active, and can be used by Users?]]></phrase>
-    <phrase title="h_dm_die_activate_desc" version_id="72" version_string="Beta"><![CDATA[If you turn it off, ne new rolls can use this die, but old rolls still show this die.]]></phrase>
-    <phrase title="h_dm_die_image" version_id="72" version_string="Beta"><![CDATA[Dice Image]]></phrase>
-    <phrase title="h_dm_die_image_desc" version_id="72" version_string="Beta"><![CDATA[You can specify an image for this die. This will be shown up instead of the title.]]></phrase>
-    <phrase title="h_dm_die_import" version_id="122" version_string="Beta 5"><![CDATA[Import a die definition]]></phrase>
-    <phrase title="h_dm_die_not_found" version_id="72" version_string="Beta"><![CDATA[could not find this die.<br />
-Is it rolled under the table?]]></phrase>
-    <phrase title="h_dm_die_sides" version_id="72" version_string="Beta"><![CDATA[number of sides]]></phrase>
-    <phrase title="h_dm_die_sides_desc" version_id="72" version_string="Beta"><![CDATA[How many sides this type of dice have?]]></phrase>
+    <phrase title="h_dm_activatedice_hint" version_id="1048" version_string="RC 2"><![CDATA[Activates the dice roller with all available systems in this node.]]></phrase>
+    <phrase title="h_dm_add_new_die" version_id="1048" version_string="RC 2"><![CDATA[Add new dice]]></phrase>
+    <phrase title="h_dm_add_new_rule" version_id="1048" version_string="RC 2"><![CDATA[Add new condition]]></phrase>
+    <phrase title="h_dm_add_new_wireset" version_id="1048" version_string="RC 2"><![CDATA[Add new system]]></phrase>
+    <phrase title="h_dm_allowComments" version_id="1048" version_string="RC 2"><![CDATA[Allow comments]]></phrase>
+    <phrase title="h_dm_all_dietypes" version_id="1048" version_string="RC 2"><![CDATA[Use all active dice types]]></phrase>
+    <phrase title="h_dm_all_wiresets" version_id="1048" version_string="RC 2"><![CDATA[All systems can be used in this forum]]></phrase>
+    <phrase title="h_dm_and_have_x_winning_die" version_id="1048" version_string="RC 2"><![CDATA[{wins} winning dice]]></phrase>
+    <phrase title="h_dm_avwiresets" version_id="1048" version_string="RC 2"><![CDATA[All available systems that can be rolled]]></phrase>
+    <phrase title="h_dm_bulk_export" version_id="1048" version_string="RC 2"><![CDATA[Export all]]></phrase>
+    <phrase title="h_dm_callback_hint" version_id="1048" version_string="RC 2"><![CDATA[<p>A PHP callback class which has as the first parameter the roll information, and as the second parameter an array of options.</p>
+<p>Callback signature:</p>
+<blockquote><code>static (<em>array</em> &$roll, <em>array</em> $options)</code></blockquote>
+
+<p>Arguments:</p>
+<ol>
+	<li><code><em>array</em> &$roll</code> - Roll information. You may modify existing ones or add your own values here.</li>
+	<li><code><em>array</em> $options</code> - .</li>
+</ol>]]></phrase>
+    <phrase title="h_dm_collapse_off" version_id="1048" version_string="RC 2"><![CDATA[Result collapse off]]></phrase>
+    <phrase title="h_dm_collapse_on_closed" version_id="1048" version_string="RC 2"><![CDATA[ Collapses results, default closed]]></phrase>
+    <phrase title="h_dm_collapse_on_open" version_id="1048" version_string="RC 2"><![CDATA[Collapses results, default open]]></phrase>
+    <phrase title="h_dm_confirm_delete_die" version_id="1048" version_string="RC 2"><![CDATA[Do you want to delete the die?]]></phrase>
+    <phrase title="h_dm_confirm_delete_rule" version_id="1048" version_string="RC 2"><![CDATA[Do you want to delete the following rule?]]></phrase>
+    <phrase title="h_dm_confirm_deletion_die" version_id="1048" version_string="RC 2"><![CDATA[Confirm Die deletion]]></phrase>
+    <phrase title="h_dm_confirm_deletion_rule" version_id="1048" version_string="RC 2"><![CDATA[Confirm rule deletion]]></phrase>
+    <phrase title="h_dm_confirm_deletion_wireset" version_id="1048" version_string="RC 2"><![CDATA[Confirm system deletion]]></phrase>
+    <phrase title="h_dm_count_dice" version_id="1048" version_string="RC 2"><![CDATA[Count the dice]]></phrase>
+    <phrase title="h_dm_count_winning_dice_in_roll" version_id="1048" version_string="RC 2"><![CDATA[Count all winning dice. With exploding dice, this can be higher than the rolled dice.]]></phrase>
+    <phrase title="h_dm_deleteRule" version_id="1048" version_string="RC 2"><![CDATA[Delete the rule.]]></phrase>
+    <phrase title="h_dm_deleteWireset" version_id="1048" version_string="RC 2"><![CDATA[Delete the system.]]></phrase>
+    <phrase title="h_dm_delete_die" version_id="1048" version_string="RC 2"><![CDATA[Delete this die]]></phrase>
+    <phrase title="h_dm_delete_roll" version_id="1048" version_string="RC 2"><![CDATA[Delete this roll.]]></phrase>
+    <phrase title="h_dm_delete_rule" version_id="1048" version_string="RC 2"><![CDATA[Delete this rule?]]></phrase>
+    <phrase title="h_dm_delete_rule_title" version_id="1048" version_string="RC 2"><![CDATA[Delete this rule]]></phrase>
+    <phrase title="h_dm_delete_wireset" version_id="1048" version_string="RC 2"><![CDATA[Delete this system]]></phrase>
+    <phrase title="h_dm_dice" version_id="1048" version_string="RC 2"><![CDATA[Die]]></phrase>
+    <phrase title="h_dm_dicecount_hint" version_id="1048" version_string="RC 2"><![CDATA[Maximum number of dice that can be rolled.<br />
+Note: The maximum number of dice that can be rolled is limited in the rule settings.]]></phrase>
+    <phrase title="h_dm_dicelist" version_id="1048" version_string="RC 2"><![CDATA[List of dice in the system]]></phrase>
+    <phrase title="h_dm_dicemanager" version_id="1048" version_string="RC 2"><![CDATA[Dice Manager overview]]></phrase>
+    <phrase title="h_dm_diceRuleActivate" version_id="1048" version_string="RC 2"><![CDATA[Enabled]]></phrase>
+    <phrase title="h_dm_diceRuleTitle" version_id="1048" version_string="RC 2"><![CDATA[Title]]></phrase>
+    <phrase title="h_dm_diceRuleTitle_Desc" version_id="1048" version_string="RC 2"><![CDATA[Give the rule a name so that you can easily find this system configuration again.]]></phrase>
+    <phrase title="h_dm_dicetypes" version_id="1048" version_string="RC 2"><![CDATA[Select Dice]]></phrase>
+    <phrase title="h_dm_dice_can_rolled_in_this_forum" version_id="1048" version_string="RC 2"><![CDATA[You can roll dice in this forum.]]></phrase>
+    <phrase title="h_dm_dice_list" version_id="1048" version_string="RC 2"><![CDATA[All dice definitions]]></phrase>
+    <phrase title="h_dm_die_activate" version_id="1048" version_string="RC 2"><![CDATA[Enabled]]></phrase>
+    <phrase title="h_dm_die_activate_desc" version_id="1048" version_string="RC 2"><![CDATA[When this die is deactivated, it can no longer be used in making rolls. Old rolls that used this die will still be shown correctly.]]></phrase>
+    <phrase title="h_dm_die_image" version_id="1048" version_string="RC 2"><![CDATA[Image]]></phrase>
+    <phrase title="h_dm_die_image_desc" version_id="1048" version_string="RC 2"><![CDATA[Enter the path to an image here. This image will be used to display the value of the die after it has been rolled.]]></phrase>
+    <phrase title="h_dm_die_import" version_id="1048" version_string="RC 2"><![CDATA[Import a die definition.]]></phrase>
+    <phrase title="h_dm_die_not_found" version_id="1048" version_string="RC 2"><![CDATA[The die you specified was not found.<br />
+Did it roll under the table?]]></phrase>
+    <phrase title="h_dm_die_sides" version_id="72" version_string="Beta"><![CDATA[Number of sides]]></phrase>
+    <phrase title="h_dm_die_sides_desc" version_id="1048" version_string="RC 2"><![CDATA[How many sides does this die have? <br />
+We are not bound by physical limitations here! ]]></phrase>
     <phrase title="h_dm_die_tag" version_id="72" version_string="Beta"><![CDATA[Tag]]></phrase>
-    <phrase title="h_dm_die_tag_desc" version_id="72" version_string="Beta"><![CDATA[enter a unique tag to identify the die. The Users can use this by manual add Dice-Tag, eg.: w6, d20 oder fudge]]></phrase>
-    <phrase title="h_dm_die_title" version_id="72" version_string="Beta"><![CDATA[Enter Title]]></phrase>
-    <phrase title="h_dm_die_title_desc" version_id="72" version_string="Beta"><![CDATA[Give this die a nice name, that shows up, everytime it's rolled.]]></phrase>
-    <phrase title="h_dm_die_values" version_id="72" version_string="Beta"><![CDATA[values]]></phrase>
-    <phrase title="h_dm_die_values_desc" version_id="72" version_string="Beta"><![CDATA[enter the possible values for this die, if you want standard (1 to sidecount), leave it blank.<br />
-you need to give as many values as sides
-samples for a 20sided die: 
-1-20: sets the Values from 1 to 20. The default behavior of a d20.
-1-10,1-10: sets to times 1 to 10.
-5*2,5*4,9*10,20: sets: five time the 2, five times the 4, nine times the 10 and the twenty.]]></phrase>
-    <phrase title="h_dm_disabled" version_id="64" version_string="Beta"><![CDATA[Disabled]]></phrase>
-    <phrase title="h_dm_display_order_Desc" version_id="72" version_string="Beta"><![CDATA[The display order of the selected wiresets for the forum.]]></phrase>
-    <phrase title="h_dm_do_import" version_id="72" version_string="Beta"><![CDATA[start the xml import]]></phrase>
-    <phrase title="h_dm_editDiceWireset" version_id="72" version_string="Beta"><![CDATA[Edit Dice Wireset]]></phrase>
-    <phrase title="h_dm_edit_die" version_id="72" version_string="Beta"><![CDATA[edit die]]></phrase>
-    <phrase title="h_dm_edit_rule" version_id="72" version_string="Beta"><![CDATA[edit rule]]></phrase>
-    <phrase title="h_dm_edit_wireset" version_id="72" version_string="Beta"><![CDATA[edit a existing wireset]]></phrase>
-    <phrase title="h_dm_enabled" version_id="64" version_string="Beta"><![CDATA[Enabled]]></phrase>
-    <phrase title="h_dm_enable_dice_in_this_forum" version_id="1" version_string="1.0"><![CDATA[activate the dice roller in this forum]]></phrase>
-    <phrase title="h_dm_error_maxdice" version_id="128" version_string="Beta 5"><![CDATA[Please select a maximum of dice]]></phrase>
-    <phrase title="h_dm_error_mindice" version_id="128" version_string="Beta 5"><![CDATA[please select the minimum of dice]]></phrase>
-    <phrase title="h_dm_error_nodietype" version_id="128" version_string="Beta 5"><![CDATA[No dice selected]]></phrase>
-    <phrase title="h_dm_explode_double" version_id="72" version_string="Beta"><![CDATA[the two highest rolls explode]]></phrase>
-    <phrase title="h_dm_explode_no" version_id="72" version_string="Beta"><![CDATA[No exploding die]]></phrase>
-    <phrase title="h_dm_explode_once" version_id="72" version_string="Beta"><![CDATA[Explode only once]]></phrase>
-    <phrase title="h_dm_explode_yes" version_id="72" version_string="Beta"><![CDATA[Highest roll explode]]></phrase>
-    <phrase title="h_dm_helpmenu" version_id="72" version_string="Beta"><![CDATA[Dice Roller]]></phrase>
-    <phrase title="h_dm_help_diceoverview" version_id="114" version_string="Beta 3"><![CDATA[Dice Overview]]></phrase>
-    <phrase title="h_dm_help_roll" version_id="114" version_string="Beta 3"><![CDATA[Rolling dice in threads and posts]]></phrase>
-    <phrase title="h_dm_help_roll_desc" version_id="114" version_string="Beta 3"><![CDATA[Just hit the "Roll Dice" Button under the Message area.]]></phrase>
-    <phrase title="h_dm_help_title" version_id="114" version_string="Beta 3"><![CDATA[Rolling Dice]]></phrase>
-    <phrase title="h_dm_hint_delete_die" version_id="72" version_string="Beta"><![CDATA[This die wil be removed from all Wiresets that use this die.<br />
-Maybe, you want to disable this die?]]></phrase>
-    <phrase title="h_dm_hint_delete_rule" version_id="68" version_string="Beta"><![CDATA[If you dlete the rule, some wiresets may no longer work correctly.<br />
-Wiresets, that uses this rule, will use no rule, if you delete this rule.]]></phrase>
-    <phrase title="h_dm_hint_delete_wireset" version_id="72" version_string="Beta"><![CDATA[Note: If you delete  a Wireset that is used before, the output of old rolls will not shown up, what is rolled. The results will still show up.]]></phrase>
-    <phrase title="h_dm_import_die" version_id="72" version_string="Beta"><![CDATA[import a die definition]]></phrase>
-    <phrase title="h_dm_import_exists" version_id="70" version_string="Beta"><![CDATA[the wireset you want to import, already exists]]></phrase>
-    <phrase title="h_dm_import_rules" version_id="72" version_string="Beta"><![CDATA[import rules]]></phrase>
-    <phrase title="h_dm_import_wireset" version_id="72" version_string="Beta"><![CDATA[import  wireset]]></phrase>
-    <phrase title="h_dm_installed" version_id="64" version_string="Beta"><![CDATA[Installed]]></phrase>
-    <phrase title="h_dm_install_social_dice" version_id="68" version_string="Beta"><![CDATA[It seems, that you have installed the Social Groups by Waindigo.<br />
-You can install the [h] Social Dice, to roll Dice in the Social Forums.]]></phrase>
-    <phrase title="h_dm_invalid_rule_xml" version_id="70" version_string="Beta"><![CDATA[invalid rule XML]]></phrase>
-    <phrase title="h_dm_invalid_tag" version_id="128" version_string="Beta 5"><![CDATA[Please enter a valid tag]]></phrase>
-    <phrase title="h_dm_invalid_wireset_XML" version_id="72" version_string="Beta"><![CDATA[the file contains no known wireset xml]]></phrase>
-    <phrase title="h_dm_invalid_wireset_xml" version_id="70" version_string="Beta"><![CDATA[You uploadad an invalid Wireset XML file.]]></phrase>
-    <phrase title="h_dm_maybe_rolls_were_deleted" version_id="125" version_string="Beta 5"><![CDATA[You selected Messages with {count} dice rolls inside. <br />
-If the target message is inside a forum, for that dice rolls are not enabled, all {count} rolls will be deleted.]]></phrase>
-    <phrase title="h_dm_moderator_log_delete_roll" version_id="122" version_string="Beta 5"><![CDATA[Roll deleted ({roll_id})]]></phrase>
-    <phrase title="h_dm_nodicewireset" version_id="72" version_string="Beta"><![CDATA[No wiresets declared...]]></phrase>
-    <phrase title="h_dm_noRule" version_id="72" version_string="Beta"><![CDATA[no winning rule neccesary]]></phrase>
-    <phrase title="h_dm_norules" version_id="72" version_string="Beta"><![CDATA[no rules defined]]></phrase>
-    <phrase title="h_dm_not_allowed_to_view_dice" version_id="1" version_string="1.0"><![CDATA[You are not allowed to view the dice result.]]></phrase>
-    <phrase title="h_dm_not_rolled_yet" version_id="1" version_string="1.0"><![CDATA[You have not rolled any die yet.]]></phrase>
-    <phrase title="h_dm_no_of_dice" version_id="1" version_string="1.0"><![CDATA[how many dice can rolled in one post]]></phrase>
-    <phrase title="h_dm_no_roll" version_id="1" version_string="1.0"><![CDATA[You have rolled no die.]]></phrase>
-    <phrase title="h_dm_no_wireset_use_this_rule" version_id="68" version_string="Beta"><![CDATA[You luck one, no wireset use this rule. It's safe to delete.]]></phrase>
-    <phrase title="h_dm_optionlist" version_id="72" version_string="Beta"><![CDATA[Options for the rule]]></phrase>
+    <phrase title="h_dm_die_tag_desc" version_id="1048" version_string="RC 2"><![CDATA[Give a tag (or abbreviation) that is used to clearly identify the die. E.g. D6, or d]]></phrase>
+    <phrase title="h_dm_die_title" version_id="1048" version_string="RC 2"><![CDATA[Title]]></phrase>
+    <phrase title="h_dm_die_title_desc" version_id="1048" version_string="RC 2"><![CDATA[Give the roll a nice name. This is the name of the die that will be displayed alongside the value of the die when a roll is made.]]></phrase>
+    <phrase title="h_dm_die_values" version_id="1048" version_string="RC 2"><![CDATA[Value]]></phrase>
+    <phrase title="h_dm_die_values_desc" version_id="1048" version_string="RC 2"><![CDATA[You can enter the possible values for the sides of the die here. If left blank, the standard 1 to the total number of sides is used.<br />
+Possible options are comma separated values, ranges, or a combination of these.<br />
+Example:<br />
+<strong>1-20</strong>: The die has ONE  side with a value of 1, ONE side with a value of 2, ..., and ONE side with a value of 20<br />
+<strong>1-10,1-10</strong>: The die has TWO sides with a value of one, TWO sides with a value of 2, ..., and TWO sides with a value of 10<br />
+<strong>5*2,5*4,9*10,20</strong>:  The die has FIVE sides with a value of 2, FIVE sides with a value of 4, NINE sides with a value of 10 and ONE side with a value of 20]]></phrase>
+    <phrase title="h_dm_disabled" version_id="1048" version_string="RC 2"><![CDATA[Deactivated]]></phrase>
+    <phrase title="h_dm_display_order_Desc" version_id="1048" version_string="RC 2"><![CDATA[The order in which the systems are displayed in the 'Roll Dice'  menu.]]></phrase>
+    <phrase title="h_dm_do_import" version_id="1048" version_string="RC 2"><![CDATA[Import XML]]></phrase>
+    <phrase title="h_dm_editDiceWireset" version_id="1048" version_string="RC 2"><![CDATA[Edit Dice System]]></phrase>
+    <phrase title="h_dm_edit_die" version_id="1048" version_string="RC 2"><![CDATA[Edit die]]></phrase>
+    <phrase title="h_dm_edit_rule" version_id="1048" version_string="RC 2"><![CDATA[Edit rule]]></phrase>
+    <phrase title="h_dm_edit_wireset" version_id="1048" version_string="RC 2"><![CDATA[Edit system]]></phrase>
+    <phrase title="h_dm_enabled" version_id="1048" version_string="RC 2"><![CDATA[Activated]]></phrase>
+    <phrase title="h_dm_enable_dice_in_this_forum" version_id="1048" version_string="RC 2"><![CDATA[Enable dice roller]]></phrase>
+    <phrase title="h_dm_error_maxdice" version_id="1048" version_string="RC 2"><![CDATA[Please select the maximum number of dice.]]></phrase>
+    <phrase title="h_dm_error_mindice" version_id="1048" version_string="RC 2"><![CDATA[Please select the minimum number of dice.]]></phrase>
+    <phrase title="h_dm_error_nodietype" version_id="1048" version_string="RC 2"><![CDATA[No die selected.]]></phrase>
+    <phrase title="h_dm_explode_double" version_id="1048" version_string="RC 2"><![CDATA[Explode the two highest values.]]></phrase>
+    <phrase title="h_dm_explode_no" version_id="1048" version_string="RC 2"><![CDATA[No exploding dice.]]></phrase>
+    <phrase title="h_dm_explode_once" version_id="1048" version_string="RC 2"><![CDATA[Explodes once.]]></phrase>
+    <phrase title="h_dm_explode_yes" version_id="1048" version_string="RC 2"><![CDATA[The highest roll explodes, repeatedly. ]]></phrase>
+    <phrase title="h_dm_helpmenu" version_id="1048" version_string="RC 2"><![CDATA[Dice]]></phrase>
+    <phrase title="h_dm_help_diceoverview" version_id="1048" version_string="RC 2"><![CDATA[Dice overview]]></phrase>
+    <phrase title="h_dm_help_roll" version_id="1048" version_string="RC 2"><![CDATA[Roll in threads and messages.]]></phrase>
+    <phrase title="h_dm_help_roll_desc" version_id="1048" version_string="RC 2"><![CDATA[Simply click on the  "Roll Dice" button beneath the editor.]]></phrase>
+    <phrase title="h_dm_help_title" version_id="1048" version_string="RC 2"><![CDATA[Dice]]></phrase>
+    <phrase title="h_dm_hint_delete_die" version_id="1048" version_string="RC 2"><![CDATA[This die will be deleted from all systems.<br />
+Perhaps deactivation is a better option.]]></phrase>
+    <phrase title="h_dm_hint_delete_rule" version_id="1048" version_string="RC 2"><![CDATA[When deleting this rule, some systems may not function correctly any more.<br />
+Systems that use this rule, won't follow any rules any more. Previous rolls may stop showing correctly.]]></phrase>
+    <phrase title="h_dm_hint_delete_wireset" version_id="1048" version_string="RC 2"><![CDATA[Warning: When you delete the system, results will no longer be shown correctly.]]></phrase>
+    <phrase title="h_dm_import_die" version_id="1048" version_string="RC 2"><![CDATA[Import a die definition]]></phrase>
+    <phrase title="h_dm_import_exists" version_id="1048" version_string="RC 2"><![CDATA[The system you are trying to import already exists.]]></phrase>
+    <phrase title="h_dm_import_rules" version_id="1048" version_string="RC 2"><![CDATA[Import rules]]></phrase>
+    <phrase title="h_dm_import_wireset" version_id="1048" version_string="RC 2"><![CDATA[Import system]]></phrase>
+    <phrase title="h_dm_installed" version_id="1048" version_string="RC 2"><![CDATA[Installed]]></phrase>
+    <phrase title="h_dm_install_social_dice" version_id="1048" version_string="RC 2"><![CDATA[You have installed the Addon <em>Social Groups by Waindigo</em>.<br />
+You can also install my Social Dice AddOn (Will be released shortly).]]></phrase>
+    <phrase title="h_dm_invalid_rule_xml" version_id="1048" version_string="RC 2"><![CDATA[The XML data does not contain a valid rule.]]></phrase>
+    <phrase title="h_dm_invalid_tag" version_id="1048" version_string="RC 2"><![CDATA[Please enter a valid tag.]]></phrase>
+    <phrase title="h_dm_invalid_wireset_XML" version_id="1048" version_string="RC 2"><![CDATA[The XML data does not contain a valid system.]]></phrase>
+    <phrase title="h_dm_invalid_wireset_xml" version_id="1048" version_string="RC 2"><![CDATA[You have loaded an invalid system XML.]]></phrase>
+    <phrase title="h_dm_maybe_rolls_were_deleted" version_id="1048" version_string="RC 2"><![CDATA[You have selected messages with a total of {count} rolls. <br />
+When the message is posted in a forum which does not support the rolling of dice, all {count} dice rolls will be deleted.]]></phrase>
+    <phrase title="h_dm_moderator_log_delete_roll" version_id="1048" version_string="RC 2"><![CDATA[Dice roll ({roll_id}) was deleted.]]></phrase>
+    <phrase title="h_dm_nodicewireset" version_id="1048" version_string="RC 2"><![CDATA[No system has been created yet.]]></phrase>
+    <phrase title="h_dm_noRule" version_id="1048" version_string="RC 2"><![CDATA[No win condition is needed.]]></phrase>
+    <phrase title="h_dm_norules" version_id="1048" version_string="RC 2"><![CDATA[No rules have been defined.]]></phrase>
+    <phrase title="h_dm_not_allowed_to_view_dice" version_id="1048" version_string="RC 2"><![CDATA[You are not allowed to see the results of this roll.]]></phrase>
+    <phrase title="h_dm_not_rolled_yet" version_id="1048" version_string="RC 2"><![CDATA[You haven't made a roll yet.]]></phrase>
+    <phrase title="h_dm_no_of_dice" version_id="1048" version_string="RC 2"><![CDATA[Maximum rolls per message]]></phrase>
+    <phrase title="h_dm_no_roll" version_id="1048" version_string="RC 2"><![CDATA[You haven't made any rolls yet..]]></phrase>
+    <phrase title="h_dm_no_wireset_use_this_rule" version_id="1048" version_string="RC 2"><![CDATA[This rule is not used by any system. It can be deleted without risk.]]></phrase>
+    <phrase title="h_dm_optionlist" version_id="1048" version_string="RC 2"><![CDATA[Rule options.]]></phrase>
     <phrase title="h_dm_options_bonus" version_id="137" version_string="Beta 5.1"><![CDATA[Bonus]]></phrase>
-    <phrase title="h_dm_options_dicecount" version_id="72" version_string="Beta"><![CDATA[Number of Dice]]></phrase>
+    <phrase title="h_dm_options_dicecount" version_id="1048" version_string="RC 2"><![CDATA[Dice count]]></phrase>
     <phrase title="h_dm_options_difficulty" version_id="72" version_string="Beta"><![CDATA[Difficulty]]></phrase>
-    <phrase title="h_dm_options_dsa1" version_id="72" version_string="Beta"><![CDATA[Value 1]]></phrase>
-    <phrase title="h_dm_options_dsa2" version_id="72" version_string="Beta"><![CDATA[Value 2]]></phrase>
-    <phrase title="h_dm_options_dsa3" version_id="72" version_string="Beta"><![CDATA[Value 3]]></phrase>
-    <phrase title="h_dm_options_points" version_id="72" version_string="Beta"><![CDATA[Points]]></phrase>
+    <phrase title="h_dm_options_dsa1" version_id="1048" version_string="RC 2"><![CDATA[Attribute 1]]></phrase>
+    <phrase title="h_dm_options_dsa2" version_id="1048" version_string="RC 2"><![CDATA[Attribute 2]]></phrase>
+    <phrase title="h_dm_options_dsa3" version_id="1048" version_string="RC 2"><![CDATA[Attribute 3]]></phrase>
+    <phrase title="h_dm_options_points" version_id="1048" version_string="RC 2"><![CDATA[Value]]></phrase>
     <phrase title="h_dm_options_rollover" version_id="72" version_string="Beta"><![CDATA[Minimum]]></phrase>
-    <phrase title="h_dm_overview" version_id="72" version_string="Beta"><![CDATA[Dice Manager Overview]]></phrase>
-    <phrase title="h_dm_please_enter_tag_using_alphanumeric" version_id="128" version_string="Beta 5"><![CDATA[Please enter a tag using a-z and 0-9 characters only.]]></phrase>
-    <phrase title="h_dm_protected" version_id="57" version_string="Beta"><![CDATA[protected]]></phrase>
-    <phrase title="h_dm_protected_first" version_id="57" version_string="Beta"><![CDATA[(Protected are first)]]></phrase>
-    <phrase title="h_dm_protected_rule" version_id="109" version_string="Beta 2"><![CDATA[This Rule is protected.]]></phrase>
-    <phrase title="h_dm_protected_wireset" version_id="57" version_string="Beta"><![CDATA[You can't change or delete this protecterd wireset. <br />
-It's needed as default set to roll anything you want.]]></phrase>
-    <phrase title="h_dm_protected_wireset_desc" version_id="57" version_string="Beta"><![CDATA[<strong>This wireset is protected.</strong><br />
-Some Wiresets are set as protected doe internal and core usage. You can only edit a few fields for your own purpose.]]></phrase>
-    <phrase title="h_dm_really_delete_roll" version_id="56" version_string="Beta"><![CDATA[Do you really want to delete this roll?]]></phrase>
-    <phrase title="h_dm_rolled_x" version_id="1" version_string="1.0"><![CDATA[Rolled {wireset}]]></phrase>
-    <phrase title="h_dm_rolled_x_for_y" version_id="1" version_string="1.0"><![CDATA[Rolled {wireset} for {for}]]></phrase>
-    <phrase title="h_dm_roll_dice" version_id="72" version_string="Beta"><![CDATA[Roll Dice]]></phrase>
-    <phrase title="h_dm_roll_dicetypes" version_id="72" version_string="Beta"><![CDATA[You can roll simple dice without rules.]]></phrase>
-    <phrase title="h_dm_roll_in_thread_x" version_id="122" version_string="Beta 5"><![CDATA[Dice Roll {comment} in Thread '{title}']]></phrase>
-    <phrase title="h_dm_roll_now" version_id="1000" version_string="RC 1"><![CDATA[Roll]]></phrase>
-    <phrase title="h_dm_rulelist" version_id="72" version_string="Beta"><![CDATA[All winning rules for rolling dice]]></phrase>
-    <phrase title="h_dm_rules" version_id="64" version_string="Beta"><![CDATA[Rules and roll options]]></phrase>
-    <phrase title="h_dm_RulesNotFound" version_id="72" version_string="Beta"><![CDATA[Can't find corresponding rule. Please Check!]]></phrase>
-    <phrase title="h_dm_rules_list" version_id="72" version_string="Beta"><![CDATA[Winning Rules List]]></phrase>
-    <phrase title="h_dm_RuleTag" version_id="72" version_string="Beta"><![CDATA[Rule Tag]]></phrase>
-    <phrase title="h_dm_RuleTag_Desc" version_id="72" version_string="Beta"><![CDATA[Give an Identifier. Only Letters, Numbers and _-]]></phrase>
-    <phrase title="h_dm_saveWireset" version_id="72" version_string="Beta"><![CDATA[save wireset]]></phrase>
-    <phrase title="h_dm_save_and_child" version_id="153" version_string="Beta 5.3"><![CDATA[Save forum and dice for children]]></phrase>
-    <phrase title="h_dm_save_die" version_id="72" version_string="Beta"><![CDATA[save die]]></phrase>
-    <phrase title="h_dm_selected_dietypes" version_id="72" version_string="Beta"><![CDATA[Use only the follwing die]]></phrase>
-    <phrase title="h_dm_selected_wiresets" version_id="107" version_string="Beta 2"><![CDATA[Only the selected wiresets can be rolled in this forum]]></phrase>
-    <phrase title="h_dm_select_rule" version_id="72" version_string="Beta"><![CDATA[select rule]]></phrase>
-    <phrase title="h_dm_sides" version_id="105" version_string="Beta 1"><![CDATA[Values on this die]]></phrase>
-    <phrase title="h_dm_sort_dice" version_id="72" version_string="Beta"><![CDATA[Sort the results ]]></phrase>
-    <phrase title="h_dm_sort_dice_in_roll" version_id="72" version_string="Beta"><![CDATA[Sort the dice ascending.<br />
-<em>This can cause problems, if you need the followed die if one explodes.</em>]]></phrase>
-    <phrase title="h_dm_stats_posts_rolls" version_id="62" version_string="Beta"><![CDATA[Posts with rolls]]></phrase>
-    <phrase title="h_dm_stats_rolled_wiresets" version_id="133" version_string="Beta 5"><![CDATA[Used Wiresets]]></phrase>
-    <phrase title="h_dm_stats_rolls" version_id="133" version_string="Beta 5"><![CDATA[Dice Rolls]]></phrase>
-    <phrase title="h_dm_stats_rolls_wins" version_id="133" version_string="Beta 5"><![CDATA[dicerolls won]]></phrase>
-    <phrase title="h_dm_sum_everytime" version_id="74" version_string="Beta"><![CDATA[sum all dice]]></phrase>
-    <phrase title="h_dm_sum_no" version_id="74" version_string="Beta"><![CDATA[build no sum]]></phrase>
-    <phrase title="h_dm_sum_winning" version_id="74" version_string="Beta"><![CDATA[build sum with all winning dice]]></phrase>
-    <phrase title="h_dm_sum_winning_explode" version_id="72" version_string="Beta"><![CDATA[Sum winning and exploding + following]]></phrase>
-    <phrase title="h_dm_tag_contain_more_numbers_hyphen" version_id="128" version_string="Beta 5"><![CDATA[tags must contain more than just numbers or a "-".]]></phrase>
-    <phrase title="h_dm_this_wiresets_use_this_rule" version_id="68" version_string="Beta"><![CDATA[The following wiresets used this rule]]></phrase>
+    <phrase title="h_dm_overview" version_id="1048" version_string="RC 2"><![CDATA[Dice Manager overview]]></phrase>
+    <phrase title="h_dm_please_enter_tag_using_alphanumeric" version_id="1048" version_string="RC 2"><![CDATA[Please enter a valid tag. Only letters (a-z) and numbers (0-9) are allowed.]]></phrase>
+    <phrase title="h_dm_protected" version_id="1048" version_string="RC 2"><![CDATA[Protected]]></phrase>
+    <phrase title="h_dm_protected_first" version_id="1048" version_string="RC 2"><![CDATA[(Protected are first in the list)]]></phrase>
+    <phrase title="h_dm_protected_rule" version_id="1048" version_string="RC 2"><![CDATA[This rule is protected and can't be edited.]]></phrase>
+    <phrase title="h_dm_protected_wireset" version_id="1048" version_string="RC 2"><![CDATA[You can't delete this protected system. <br />
+It is needed as a basic set for making any rolls at all.]]></phrase>
+    <phrase title="h_dm_protected_wireset_desc" version_id="1048" version_string="RC 2"><![CDATA[<strong>This system has been protected.</strong><br />You can alter only some of the fields.]]></phrase>
+    <phrase title="h_dm_really_delete_roll" version_id="1048" version_string="RC 2"><![CDATA[Do you really want to delete this dice roll?]]></phrase>
+    <phrase title="h_dm_rolled_x" version_id="1048" version_string="RC 2"><![CDATA[Rolled {wireset}.]]></phrase>
+    <phrase title="h_dm_rolled_x_for_y" version_id="1048" version_string="RC 2"><![CDATA[Rolled {wireset} for {for}.]]></phrase>
+    <phrase title="h_dm_roll_dice" version_id="1048" version_string="RC 2"><![CDATA[Roll Dice]]></phrase>
+    <phrase title="h_dm_roll_dicetypes" version_id="1048" version_string="RC 2"><![CDATA[Choose the type and number of dice you want to throw]]></phrase>
+    <phrase title="h_dm_roll_in_thread_x" version_id="1048" version_string="RC 2"><![CDATA[Roll dice {comment} in thread  '{title}']]></phrase>
+    <phrase title="h_dm_roll_now" version_id="1048" version_string="RC 2"><![CDATA[Roll Now]]></phrase>
+    <phrase title="h_dm_rulelist" version_id="1048" version_string="RC 2"><![CDATA[All rules]]></phrase>
+    <phrase title="h_dm_rules" version_id="1048" version_string="RC 2"><![CDATA[Rules and Roll Options]]></phrase>
+    <phrase title="h_dm_RulesNotFound" version_id="1048" version_string="RC 2"><![CDATA[Can't find the corresponding rule. Please check if the rule has already been imported.]]></phrase>
+    <phrase title="h_dm_rules_list" version_id="1048" version_string="RC 2"><![CDATA[Rule overview]]></phrase>
+    <phrase title="h_dm_RuleTag" version_id="1048" version_string="RC 2"><![CDATA[Tag]]></phrase>
+    <phrase title="h_dm_RuleTag_Desc" version_id="1048" version_string="RC 2"><![CDATA[Enter a short identification tag for the rule. Only letters (a-z) and numbers (0-9) are allowed.]]></phrase>
+    <phrase title="h_dm_saveWireset" version_id="1048" version_string="RC 2"><![CDATA[Save System]]></phrase>
+    <phrase title="h_dm_save_and_child" version_id="1048" version_string="RC 2"><![CDATA[Save Forum and apply to child forums]]></phrase>
+    <phrase title="h_dm_save_die" version_id="1048" version_string="RC 2"><![CDATA[Save Die]]></phrase>
+    <phrase title="h_dm_selected_dietypes" version_id="1048" version_string="RC 2"><![CDATA[Use these dice]]></phrase>
+    <phrase title="h_dm_selected_wiresets" version_id="1048" version_string="RC 2"><![CDATA[Only the selected systems can be used]]></phrase>
+    <phrase title="h_dm_select_rule" version_id="1048" version_string="RC 2"><![CDATA[Select rule]]></phrase>
+    <phrase title="h_dm_sides" version_id="1048" version_string="RC 2"><![CDATA[Face values of the dice]]></phrase>
+    <phrase title="h_dm_sort_dice" version_id="1048" version_string="RC 2"><![CDATA[Sort results]]></phrase>
+    <phrase title="h_dm_sort_dice_in_roll" version_id="1048" version_string="RC 2"><![CDATA[Sort ascending<br />
+<em>If you need the roll order for exploding dice, leave this option deactivated.</em>]]></phrase>
+    <phrase title="h_dm_stats_posts_rolls" version_id="1048" version_string="RC 2"><![CDATA[Messages with dice rolls]]></phrase>
+    <phrase title="h_dm_stats_rolled_wiresets" version_id="1048" version_string="RC 2"><![CDATA[Used systems]]></phrase>
+    <phrase title="h_dm_stats_rolls" version_id="1048" version_string="RC 2"><![CDATA[Dice rolls]]></phrase>
+    <phrase title="h_dm_stats_rolls_wins" version_id="1048" version_string="RC 2"><![CDATA[Successful rolls]]></phrase>
+    <phrase title="h_dm_sum_everytime" version_id="1048" version_string="RC 2"><![CDATA[Add the values of all dice]]></phrase>
+    <phrase title="h_dm_sum_no" version_id="1048" version_string="RC 2"><![CDATA[Don't add the values of all dice]]></phrase>
+    <phrase title="h_dm_sum_winning" version_id="1048" version_string="RC 2"><![CDATA[Add the values of the winning dice]]></phrase>
+    <phrase title="h_dm_sum_winning_explode" version_id="1048" version_string="RC 2"><![CDATA[Add the winning dice and the exploding dice, including the next rolls]]></phrase>
+    <phrase title="h_dm_tag_contain_more_numbers_hyphen" version_id="1048" version_string="RC 2"><![CDATA[A tag should contain more characters than just numbers..]]></phrase>
+    <phrase title="h_dm_this_wiresets_use_this_rule" version_id="1048" version_string="RC 2"><![CDATA[Systems using this rule]]></phrase>
     <phrase title="h_dm_turn_on_wiresets" version_id="72" version_string="Beta"><![CDATA[You must turn on the wireset System to use them.<br /><br />
 You can turn on them in the <a href="admin.php?options/list/dice">Settings</a>.]]></phrase>
-    <phrase title="h_dm_unknown_roll_id" version_id="122" version_string="Beta 5"><![CDATA[Unknown ID]]></phrase>
-    <phrase title="h_dm_usable_dietypes" version_id="72" version_string="Beta"><![CDATA[Select die]]></phrase>
-    <phrase title="h_dm_usable_wiresets" version_id="107" version_string="Beta 2"><![CDATA[Rollable Wirsets]]></phrase>
-    <phrase title="h_dm_usable_wiresets_Desc" version_id="107" version_string="Beta 2"><![CDATA[Select Wiresets the use cann roll in this forum.]]></phrase>
-    <phrase title="h_dm_wiremanagericon" version_id="1" version_string="1.0"><![CDATA[Wireset Manager]]></phrase>
-    <phrase title="h_dm_wireset" version_id="72" version_string="Beta"><![CDATA[Wireset]]></phrase>
-    <phrase title="h_dm_WiresetActivate" version_id="72" version_string="Beta"><![CDATA[is this wireset active?]]></phrase>
-    <phrase title="h_dm_WiresetBuildSum" version_id="72" version_string="Beta"><![CDATA[should we calculate the sum?]]></phrase>
-    <phrase title="h_dm_WiresetDesc" version_id="72" version_string="Beta"><![CDATA[short description]]></phrase>
-    <phrase title="h_dm_WiresetDesc_Desc" version_id="72" version_string="Beta"><![CDATA[Please describe for what you can use this wireset. eg.g. Vampire The Masquerade Dark Age, 10's explode. 1' s negate.]]></phrase>
-    <phrase title="h_dm_WiresetExplode" version_id="72" version_string="Beta"><![CDATA[did this type of roll explode?]]></phrase>
-    <phrase title="h_dm_WiresetImage" version_id="72" version_string="Beta"><![CDATA[Image path]]></phrase>
-    <phrase title="h_dm_WiresetImage_Desc" version_id="72" version_string="Beta"><![CDATA[enter a pth to the wireset image (Icon) path on your Server. You can leace this blank]]></phrase>
-    <phrase title="h_dm_wiresetlist" version_id="72" version_string="Beta"><![CDATA[All Wiresets]]></phrase>
-    <phrase title="h_dm_WiresetMaxDice" version_id="72" version_string="Beta"><![CDATA[max dice per roll]]></phrase>
-    <phrase title="h_dm_WiresetMaxDice_Desc" version_id="72" version_string="Beta"><![CDATA[How many dice a user can use in one roll.]]></phrase>
-    <phrase title="h_dm_WiresetMinDice" version_id="72" version_string="Beta"><![CDATA[min dice per roll]]></phrase>
-    <phrase title="h_dm_WiresetMinDice_Desc" version_id="72" version_string="Beta"><![CDATA[How many dice a user must  use in one roll.]]></phrase>
-    <phrase title="h_dm_WiresetNotFound" version_id="72" version_string="Beta"><![CDATA[could not load wireset...]]></phrase>
-    <phrase title="h_dm_WiresetOption" version_id="72" version_string="Beta"><![CDATA[need options]]></phrase>
-    <phrase title="h_dm_WiresetOption_Desc" version_id="72" version_string="Beta"><![CDATA[how many options can this Wireset have? 0 to 8]]></phrase>
-    <phrase title="h_dm_wiresets" version_id="64" version_string="Beta"><![CDATA[Wiresets]]></phrase>
-    <phrase title="h_dm_WiresetTag" version_id="72" version_string="Beta"><![CDATA[Wirest-Tag]]></phrase>
-    <phrase title="h_dm_WiresetTag_Desc" version_id="72" version_string="Beta"><![CDATA[enter a unique tag to identify the wireset. The Users can use this by manual add Dice-Tag, eg.: w6, d20 oder fudge]]></phrase>
-    <phrase title="h_dm_WiresetTitle" version_id="72" version_string="Beta"><![CDATA[title]]></phrase>
-    <phrase title="h_dm_WiresetTitle_Desc" version_id="72" version_string="Beta"><![CDATA[give this Wireset a cool name]]></phrase>
-    <phrase title="h_dm_WiresetUseRules" version_id="72" version_string="Beta"><![CDATA[use winning Rules]]></phrase>
-    <phrase title="h_dm_wireset_basics" version_id="72" version_string="Beta"><![CDATA[Wireset Basics]]></phrase>
-    <phrase title="h_dm_wireset_rules" version_id="72" version_string="Beta"><![CDATA[Winning Rules]]></phrase>
-    <phrase title="h_dm_wireset_specials" version_id="72" version_string="Beta"><![CDATA[Wireset Specials]]></phrase>
-    <phrase title="h_dm_with_dice_rolls" version_id="1000" version_string="RC 1"><![CDATA[With dice rolls]]></phrase>
-    <phrase title="h_dm_with_this_sum" version_id="74" version_string="Beta"><![CDATA[and collected {sum} points.]]></phrase>
-    <phrase title="h_dm_xenmig_latestroll" version_id="114" version_string="Beta 3"><![CDATA[Latest Roll]]></phrase>
-    <phrase title="h_dm_your_roll_in_thread_x_was_deleted" version_id="129" version_string="Beta 5"><![CDATA[Your dice roll <em>{roll}</em> in your <a href="{postlink}">post</a> inside the thread {title} was deleted.]]></phrase>
-    <phrase title="h_dm_you_cant_roll" version_id="1" version_string="1.0"><![CDATA[You can't roll dice here and now. <br />
-<em>Maybe you're time to roll is up?</em>]]></phrase>
-    <phrase title="h_dm_you_rolled" version_id="1" version_string="1.0"><![CDATA[You rolled:]]></phrase>
+    <phrase title="h_dm_unknown_roll_id" version_id="1048" version_string="RC 2"><![CDATA[Unknown dice roll  (ID)]]></phrase>
+    <phrase title="h_dm_usable_dietypes" version_id="1048" version_string="RC 2"><![CDATA[Select die]]></phrase>
+    <phrase title="h_dm_usable_wiresets" version_id="1048" version_string="RC 2"><![CDATA[Available systems]]></phrase>
+    <phrase title="h_dm_usable_wiresets_Desc" version_id="1048" version_string="RC 2"><![CDATA[Select the systems that can be used on this forum.]]></phrase>
+    <phrase title="h_dm_wiremanagericon" version_id="1048" version_string="RC 2"><![CDATA[Overview of systems]]></phrase>
+    <phrase title="h_dm_wireset" version_id="1048" version_string="RC 2"><![CDATA[System]]></phrase>
+    <phrase title="h_dm_WiresetActivate" version_id="1048" version_string="RC 2"><![CDATA[Enabled]]></phrase>
+    <phrase title="h_dm_WiresetBuildSum" version_id="1048" version_string="RC 2"><![CDATA[Sum dice totals]]></phrase>
+    <phrase title="h_dm_WiresetDesc" version_id="1048" version_string="RC 2"><![CDATA[Description]]></phrase>
+    <phrase title="h_dm_WiresetDesc_Desc" version_id="1048" version_string="RC 2"><![CDATA[Give a short description of the game that the system applies to. E.g. the Dark Eye (Das Schwarze Auge), Dungeons & Dragons, or Savage Worlds.]]></phrase>
+    <phrase title="h_dm_WiresetExplode" version_id="1048" version_string="RC 2"><![CDATA[Exploding Dice]]></phrase>
+    <phrase title="h_dm_WiresetImage" version_id="1048" version_string="RC 2"><![CDATA[Image Path]]></phrase>
+    <phrase title="h_dm_WiresetImage_Desc" version_id="1048" version_string="RC 2"><![CDATA[Enter the path to an image for the system here. This image will only be shown in the ACP.]]></phrase>
+    <phrase title="h_dm_wiresetlist" version_id="1048" version_string="RC 2"><![CDATA[All systems]]></phrase>
+    <phrase title="h_dm_WiresetMaxDice" version_id="1048" version_string="RC 2"><![CDATA[Maximum amount of dice per roll.]]></phrase>
+    <phrase title="h_dm_WiresetMaxDice_Desc" version_id="1048" version_string="RC 2"><![CDATA[What is the maximum amount of dice that may be rolled?]]></phrase>
+    <phrase title="h_dm_WiresetMinDice" version_id="1048" version_string="RC 2"><![CDATA[Minimum amount of dice per roll]]></phrase>
+    <phrase title="h_dm_WiresetMinDice_Desc" version_id="1048" version_string="RC 2"><![CDATA[What is the minimum amount of dice that may be rolled?]]></phrase>
+    <phrase title="h_dm_WiresetNotFound" version_id="1048" version_string="RC 2"><![CDATA[Can't load the system...]]></phrase>
+    <phrase title="h_dm_WiresetOption" version_id="1048" version_string="RC 2"><![CDATA[Required options]]></phrase>
+    <phrase title="h_dm_WiresetOption_Desc" version_id="1048" version_string="RC 2"><![CDATA[How many options (0-8) can this system have? ]]></phrase>
+    <phrase title="h_dm_wiresets" version_id="1048" version_string="RC 2"><![CDATA[Systems]]></phrase>
+    <phrase title="h_dm_WiresetTag" version_id="1048" version_string="RC 2"><![CDATA[System-Tag]]></phrase>
+    <phrase title="h_dm_WiresetTag_Desc" version_id="1048" version_string="RC 2"><![CDATA[Give the system a short identification tag. Only letters (a-z) and numbers (0-9) are allowed. E.g. DSA, D20, D6]]></phrase>
+    <phrase title="h_dm_WiresetTitle" version_id="1048" version_string="RC 2"><![CDATA[Title]]></phrase>
+    <phrase title="h_dm_WiresetTitle_Desc" version_id="1048" version_string="RC 2"><![CDATA[Give the system a cool name.]]></phrase>
+    <phrase title="h_dm_WiresetUseRules" version_id="1048" version_string="RC 2"><![CDATA[Win conditions]]></phrase>
+    <phrase title="h_dm_wireset_basics" version_id="1048" version_string="RC 2"><![CDATA[Basic options]]></phrase>
+    <phrase title="h_dm_wireset_rules" version_id="1048" version_string="RC 2"><![CDATA[Win conditions]]></phrase>
+    <phrase title="h_dm_wireset_specials" version_id="1048" version_string="RC 2"><![CDATA[Special systems]]></phrase>
+    <phrase title="h_dm_with_dice_rolls" version_id="1048" version_string="RC 2"><![CDATA[With dice]]></phrase>
+    <phrase title="h_dm_with_this_sum" version_id="1048" version_string="RC 2"><![CDATA[Total {sum} points]]></phrase>
+    <phrase title="h_dm_xenmig_latestroll" version_id="1048" version_string="RC 2"><![CDATA[Last dice roll]]></phrase>
+    <phrase title="h_dm_your_roll_in_thread_x_was_deleted" version_id="1048" version_string="RC 2"><![CDATA[Your roll <em>{roll}</em> in your <a href="{postlink}">message</a> in the thread {title} was deleted.]]></phrase>
+    <phrase title="h_dm_you_cant_roll" version_id="1048" version_string="RC 2"><![CDATA[You can't make a roll right here or right now.<br />
+<em>Perhaps your time is up?</em>]]></phrase>
+    <phrase title="h_dm_you_rolled" version_id="1048" version_string="RC 2"><![CDATA[You rolled:]]></phrase>
     <phrase title="h_roll_comment" version_id="1" version_string="1.0"><![CDATA[for]]></phrase>
     <phrase title="h_roll_dice" version_id="1" version_string="1.0"><![CDATA[Roll simple dice]]></phrase>
     <phrase title="h_roll_for" version_id="1" version_string="1.0"><![CDATA[Roll]]></phrase>
     <phrase title="h_roll_wireset" version_id="1" version_string="1.0"><![CDATA[Roll Wireset]]></phrase>
     <phrase title="moderator_log_dice_roll_delete_roll" version_id="122" version_string="Beta 5"><![CDATA[Deleted Roll]]></phrase>
     <phrase title="no_dice_rolled" version_id="1" version_string="1.0"><![CDATA[Currently no die is rolled in this Post.]]></phrase>
-    <phrase title="option_dice_roll_in" version_id="1" version_string="1.0"><![CDATA[Roll Dice In]]></phrase>
-    <phrase title="option_dice_roll_in_explain" version_id="1" version_string="1.0"><![CDATA[The places where user can roll dice.<br />
-You can be more specific in the Usergroup Options. If you disable the settings here, the usergroups can not override this setting.]]></phrase>
-    <phrase title="option_group_hDice" version_id="62" version_string="Beta"><![CDATA[Dice Manager]]></phrase>
-    <phrase title="option_group_hDice_description" version_id="62" version_string="Beta"><![CDATA[all settings for dice usage]]></phrase>
-    <phrase title="option_hCollapseDiceInPost" version_id="1" version_string="1.0"><![CDATA[Collapse dice roll results in posts]]></phrase>
-    <phrase title="option_hCollapseDiceInPost_explain" version_id="122" version_string="Beta 5"><![CDATA[You can choose, if and how the rolls are displayed inside the post.<br />
-Open and No Collapse will increase the length of the default page.]]></phrase>
+    <phrase title="option_dice_roll_in" version_id="1048" version_string="RC 2"><![CDATA[Roll dice in... ]]></phrase>
+    <phrase title="option_dice_roll_in_explain" version_id="1048" version_string="RC 2"><![CDATA[At these locations you can roll dice.<br />
+You can make detailed configurations in the User Groups.]]></phrase>
+    <phrase title="option_group_hDice" version_id="1048" version_string="RC 2"><![CDATA[Dice Manager]]></phrase>
+    <phrase title="option_group_hDice_description" version_id="1048" version_string="RC 2"><![CDATA[Settings for Dice Manager]]></phrase>
+    <phrase title="option_hCollapseDiceInPost" version_id="1048" version_string="RC 2"><![CDATA[Collapse the roll in the post]]></phrase>
+    <phrase title="option_hCollapseDiceInPost_explain" version_id="1048" version_string="RC 2"><![CDATA[This option controls the collapsing of dice rolls in forum posts.<br />
+By default, only the end results is directly visible. <br />
+Clicking on the result will allow the user to see the individual dice.<br />
+This option can save a lot of space. But to obtain details, the user must click on the results.]]></phrase>
     <phrase title="option_hDisplayParentMods" version_id="142" version_string="Beta 5.1"><![CDATA[Display Mods from parent Forums]]></phrase>
     <phrase title="option_hDisplayParentMods_explain" version_id="142" version_string="Beta 5.1"><![CDATA[Activate this Option, to display Mods, who are set in parent Forums.]]></phrase>
-    <phrase title="option_hEnableBackwardCompatibility" version_id="114" version_string="Beta 3"><![CDATA[Enable Compatibility Mode]]></phrase>
-    <phrase title="option_hEnableBackwardCompatibility_explain" version_id="156" version_string="Beta 5.3"><![CDATA[Enable this, if you had imported dice rolls from my old vBulletin AddOn.
-If not, let this option deactivated to save performance.]]></phrase>
-    <phrase title="option_hKeyDice" version_id="107" version_string="Beta 2"><![CDATA[Key for Dice Manager]]></phrase>
-    <phrase title="option_hKeyDice_explain" version_id="135" version_string="Beta 5"><![CDATA[Activate the Checkbox, if you want to get a key. <br />
-<p class="explain">This Key's will be fetched from Hoffis Server. If it didn't work, please contact Hoffi at <a href="http://www.xenforo.com/community/">XenForo.com</a> or <a href="http://www.xendach.de"> XenDACH.de</a></p>]]></phrase>
-    <phrase title="option_hMaximumRollsPerPost" version_id="135" version_string="Beta 5"><![CDATA[Maximum Rolls]]></phrase>
-    <phrase title="option_hMaximumRollsPerPost_explain" version_id="135" version_string="Beta 5"><![CDATA[The maximum wiresets that can be rolled in one Post.]]></phrase>
-    <phrase title="option_hOverallMaxDice" version_id="135" version_string="Beta 5"><![CDATA[Maximun Dice]]></phrase>
-    <phrase title="option_hOverallMaxDice_explain" version_id="1000" version_string="RC 1"><![CDATA[Here you can set and change th overall maximum amout of rolls can be done in one post.<br />
-This Setting can be lowered by the wireset itself, but not increased.]]></phrase>
+    <phrase title="option_hEnableBackwardCompatibility" version_id="1048" version_string="RC 2"><![CDATA[Enable backwards compatibility mode.]]></phrase>
+    <phrase title="option_hEnableBackwardCompatibility_explain" version_id="1048" version_string="RC 2"><![CDATA[Enable this option when importing rolls from my old vBulletin AddOn.]]></phrase>
+    <phrase title="option_hKeyDice" version_id="1048" version_string="RC 2"><![CDATA[Key for Dice Manager]]></phrase>
+    <phrase title="option_hKeyDice_explain" version_id="1048" version_string="RC 2"><![CDATA[Enable the control panel when you want to create a key.<br /><br />
+<p class="explain">This software key was created from Hoffi's Server. If it doesn't work, contact Hoffi at <a href="http://www.xenforo.com/community/">XenForo.com</a> or <a href="http://www.xendach.de"> XenDACH.de</a>.<br />
+It will only transfer the AddOn, the domain and the server IP to the service. If the connection fails, this won't lead to restrictions. The AddOn also functions without a key.</p>]]></phrase>
+    <phrase title="option_hMaximumRollsPerPost" version_id="1048" version_string="RC 2"><![CDATA[Maximum number of rolls]]></phrase>
+    <phrase title="option_hMaximumRollsPerPost_explain" version_id="1048" version_string="RC 2"><![CDATA[Here you can configure the maximum number of rolls that can be made in one post.]]></phrase>
+    <phrase title="option_hOverallMaxDice" version_id="1048" version_string="RC 2"><![CDATA[Maximum number of dice]]></phrase>
+    <phrase title="option_hOverallMaxDice_explain" version_id="1048" version_string="RC 2"><![CDATA[Here you can configure the maximum number of dice that can be used in one post .<br />
+A system can have a lower number, but not a higher one.]]></phrase>
     <phrase title="option_hPiwikDisableUsergroup" version_id="102" version_string="Beta 1"><![CDATA[Disabled Usergroups]]></phrase>
     <phrase title="option_hPiwikDisableUsergroup_explain" version_id="102" version_string="Beta 1"><![CDATA[Users that are in the following Usergroups won't be set a Piwik Tracking Code.<br />
 So you can cut out your Team and/r Administrators from tracking.]]></phrase>
@@ -1049,8 +1058,8 @@ So you can cut out your Team and/r Administrators from tracking.]]></phrase>
     <phrase title="option_hPiwikStatsDetails_explain" version_id="100" version_string="Beta 1"><![CDATA[]]></phrase>
     <phrase title="option_hShowResultsAutoSuggest" version_id="105" version_string="Beta 1"><![CDATA[Resultcount for AutoSuggest]]></phrase>
     <phrase title="option_hShowResultsAutoSuggest_explain" version_id="105" version_string="Beta 1"><![CDATA[]]></phrase>
-    <phrase title="permission_forum_can_delete_diceroll_post" version_id="1" version_string="1.0"><![CDATA[Delete any dice roll]]></phrase>
-    <phrase title="permission_forum_can_roll_dice_post" version_id="1" version_string="1.0"><![CDATA[Roll dice in post]]></phrase>
+    <phrase title="permission_forum_can_delete_diceroll_post" version_id="1048" version_string="RC 2"><![CDATA[Can delete dice roll]]></phrase>
+    <phrase title="permission_forum_can_roll_dice_post" version_id="1" version_string="1.0"><![CDATA[Can make rolls in posts]]></phrase>
     <phrase title="permission_forum_can_see_dice_post" version_id="1" version_string="1.0"><![CDATA[View any dice roll in post]]></phrase>
     <phrase title="please_enter_valid_tag" version_id="1" version_string="1.0"><![CDATA[enter a valid tag]]></phrase>
     <phrase title="quickreply" version_id="1" version_string="1.0"><![CDATA[Quickreply]]></phrase>
@@ -1066,7 +1075,7 @@ So you can cut out your Team and/r Administrators from tracking.]]></phrase>
     <phrase title="style_property_hDieDisplayWin_master" version_id="66" version_string="Beta"><![CDATA[Winning Die]]></phrase>
     <phrase title="style_property_hDieDisplay_description_master" version_id="1" version_string="1.0"><![CDATA[Format the display with the default background image, if no special is specified.]]></phrase>
     <phrase title="style_property_hDieDisplay_master" version_id="1" version_string="1.0"><![CDATA[Die Display]]></phrase>
-    <phrase title="style_property_hDisplayDieIconInMessageList_description_master" version_id="1000" version_string="RC 1"><![CDATA[Be careful, this cann actually add a lot of querys. In a leter Version this will be optimized.<br />
+    <phrase title="style_property_hDisplayDieIconInMessageList_description_master" version_id="1000" version_string="RC 1"><![CDATA[Be careful, this can actually add a lot of querys. In a later versions this will be optimized.<br />
 Actually disabled until next version...]]></phrase>
     <phrase title="style_property_hDisplayDieIconInMessageList_master" version_id="1000" version_string="RC 1"><![CDATA[Display Icon in Message List]]></phrase>
     <phrase title="style_property_hDisplayDieIconInNode_description_master" version_id="1000" version_string="RC 1"><![CDATA[]]></phrase>

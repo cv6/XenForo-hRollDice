@@ -82,7 +82,7 @@ difficulty</options>
   </rule>
   <rule>
     <tag>norule</tag>
-    <title>no Rule</title>
+    <title>no rule</title>
     <active>1</active>
     <callback_classname>Hoffi_DM_Dice_Rules</callback_classname>
     <callback_method>_default</callback_method>

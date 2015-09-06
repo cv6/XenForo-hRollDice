@@ -2,8 +2,8 @@
 <wiresetlist>
   <wireset>
     <tag>dice</tag>
-    <title>only dice</title>
-    <description>roll some dice</description>
+    <title>Simple Dice</title>
+    <description>Roll some dice</description>
     <image/>
     <active>1</active>
     <display_order>0</display_order>
@@ -20,9 +20,9 @@
     <comments>0</comments>
   </wireset>
   <wireset>
-    <tag>w6</tag>
-    <title>Standard W6</title>
-    <description>the normal W6</description>
+    <tag>d6</tag>
+    <title>Standard D6</title>
+    <description>Normal D6</description>
     <image/>
     <active>1</active>
     <display_order>2</display_order>
@@ -40,8 +40,8 @@
   </wireset>
   <wireset>
     <tag>wod</tag>
-    <title>World of Darkness</title>
-    <description>use this Type of Die in World of Darkness Games</description>
+    <title>oWoD</title>
+    <description>Use this set in Old World of Darkness Games</description>
     <image/>
     <active>1</active>
     <display_order>2</display_order>
@@ -115,9 +115,9 @@
     <comments>1</comments>
   </wireset>
   <wireset>
-    <tag>rullUnder</tag>
-    <title>Roll under</title>
-    <description>Rull your die below the number</description>
+    <tag>rollUnder</tag>
+    <title>Roll Under</title>
+    <description>Roll under a number</description>
     <image/>
     <active>1</active>
     <display_order>9</display_order>
@@ -136,7 +136,7 @@
   <wireset>
     <tag>sw</tag>
     <title>Savage Worlds</title>
-    <description>Use this set, for SavagwWorlds</description>
+    <description>Use this set for Savage Worlds</description>
     <image/>
     <active>1</active>
     <display_order>10</display_order>
@@ -154,7 +154,7 @@
   </wireset>
   <wireset>
     <tag>dd3</tag>
-    <title>Dungeons and Dragons 3</title>
+    <title>DnD 3</title>
     <description>DnD3.5, Pathfinder</description>
     <image/>
     <active>1</active>
@@ -192,8 +192,8 @@
   </wireset>
   <wireset>
     <tag>nwod</tag>
-    <title>new World of Darkness</title>
-    <description>use this Type of Die in New World of Darkness Games</description>
+    <title>nWoD</title>
+    <description>Use this set in New World of Darkness Games</description>
     <image>styles/default/hoffi/wiresets/nwod.jpg</image>
     <active>1</active>
     <display_order>20</display_order>
@@ -230,8 +230,8 @@
   </wireset>
   <wireset>
     <tag>rollOver</tag>
-    <title>Roll Above a Number</title>
-    <description/>
+    <title>Roll Above</title>
+    <description>Roll above a number</description>
     <image/>
     <active>1</active>
     <display_order>99</display_order>
