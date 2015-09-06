@@ -2,7 +2,7 @@
 <wiresetlist>
   <wireset>
     <tag>dice</tag>
-    <title>only dice</title>
+    <title>Simple Dice</title>
     <description>Roll some dice</description>
     <image/>
     <active>1</active>
@@ -116,7 +116,7 @@
   </wireset>
   <wireset>
     <tag>rollUnder</tag>
-    <title>Roll under</title>
+    <title>Roll Under</title>
     <description>Roll under a number</description>
     <image/>
     <active>1</active>
@@ -230,7 +230,7 @@
   </wireset>
   <wireset>
     <tag>rollOver</tag>
-    <title>Roll above</title>
+    <title>Roll Above</title>
     <description>Roll above a number</description>
     <image/>
     <active>1</active>
