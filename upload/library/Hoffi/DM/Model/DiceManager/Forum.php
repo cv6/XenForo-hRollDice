@@ -39,6 +39,18 @@ class Hoffi_DM_Model_DiceManager_Forum extends XFCP_Hoffi_DM_Model_DiceManager_F
 		}
 		return XenForo_Permission::hasContentPermission($nodePermissions, 'can_roll_dice_post') && $forum['h_dm_allowdiceroll'];
 	}
+	
+	public function preparePostJoinOptions(array $fetchOptions)
+	{
+		$parent = parent::preparePostJoinOptions($fetchOptions);
+
+		$parent['selectFields'] .= ',
+            xf_hoffi_dm_rolls.roll_id as roll_id';
+		$parent['joinTables'] .= '
+            LEFT JOIN xf_hoffi_dm_rolls ON (post.post_id = xf_hoffi_dm_rolls.post_id)';
+
+		return $parent;
+	}
 
 
 }

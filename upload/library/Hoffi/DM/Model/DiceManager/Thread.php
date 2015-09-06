@@ -73,11 +73,8 @@ class Hoffi_DM_Model_DiceManager_Thread extends XFCP_Hoffi_DM_Model_DiceManager_
 	{
 		if (empty($thread))
 			return false;
-		
-		return false;
-		$rolls = $this->_getRollModel()->getLastRollFromThread($thread['thread_id']);
-		return (!empty($rolls));
-	}
-	
+
+		return ($thread['h_dice_rolls'] > 0);
+ 	}
 
 }

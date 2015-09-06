@@ -7,7 +7,8 @@
  * @category Xenforo Hoffi
  * @package DiceRoller
  */
-class Hoffi_DM_Model_Rolls extends XenForo_Model {
+class Hoffi_DM_Model_Rolls extends XenForo_Model
+{
 
 	/**
 	 * Gets the specified Dice Wireset
@@ -18,12 +19,23 @@ class Hoffi_DM_Model_Rolls extends XenForo_Model {
 	 */
 	public function getRollbyPost($post_id)
 	{
-		return $this->_getDb()->fetchRow('
+		return $this->fetchAllKeyed('
 			SELECT *
 			FROM xf_hoffi_dm_rolls
-			WHERE post_id = ?
-			and roll_state = "visible"
-		', $post_id);
+			WHERE post_id = ? 
+				AND roll_state = "visible"
+			', 'roll_id', array($post_id));
+	}
+
+	public function getRollbyPostAndThread($post_id,$thread_id)
+	{
+		return $this->fetchAllKeyed('
+			SELECT *
+			FROM xf_hoffi_dm_rolls
+			WHERE post_id = ? 
+				AND thread_id = ?
+				AND roll_state = "visible"
+			', 'roll_id', array($post_id, $thread_id));
 	}
 
 	public function getRollbyRoll($roll_id)
@@ -49,17 +61,17 @@ class Hoffi_DM_Model_Rolls extends XenForo_Model {
 		return $this->fetchAllKeyed('
 			SELECT *
 			FROM xf_hoffi_dm_rolls
-			WHERE post_id IN (' . $this->_getDb()->quote($postids) . ')','roll_id');
+			WHERE post_id IN (' . $this->_getDb()->quote($postids) . ')', 'roll_id');
 	}
-	
+
 	public function getRollsByThread($thread_id)
 	{
-		return $this->_getDb()->fetchAllKeyed('
+		return $this->fetchAllKeyed('
 			SELECT *
 			FROM xf_hoffi_dm_rolls
 			WHERE thread_id = ?
 			and roll_state = "visible"
-		', $thread_id);
+		', 'roll_id', $thread_id);
 	}
 
 	public function getLastRollFromThread($thread_id)
@@ -80,22 +92,67 @@ class Hoffi_DM_Model_Rolls extends XenForo_Model {
 		$this->_getDb()->delete('xf_hoffi_dm_rolls', 'hash IS NOT NULL AND roll_time < DATE_SUB(NOW(), INTERVAL 1 DAY)');
 	}
 
-	public function fetchRollsForPost($post_id)
-	{
-		return $this->fetchAllKeyed('
-			SELECT *
-			FROM xf_hoffi_dm_rolls
-			WHERE post_id = ?', 'roll_id', array($post_id));
-	}
-	
-	public function getLatestRolls($c=1)
+	public function getLatestRolls($c = 1)
 	{
 		return $this->_getDb()->fetchRow('
 			SELECT *
 			FROM xf_hoffi_dm_rolls
 			WHERE  roll_state = "visible"
-			ORDER BY roll_time DESC LIMIT ?' , (int)$c);		
+			ORDER BY roll_time DESC LIMIT ?', (int) $c);
 	}
 
+	public function getRollsByPostIdsGrouped(array $postids = array())
+	{
+		$allRolls = $this->getRollsByPostIds($postids);
+		$allRollsGrouped = array();
+		if (!empty($allRolls))
+		{
+			foreach ($allRolls as $roll_id => $roll)
+			{
+				if (empty($allRollsGrouped[$roll['post_id']]))
+				{
+					$allRollsGrouped[$roll['post_id']] = array();
+				}
+				$allRollsGrouped[$roll['post_id']][$roll_id] = $roll;
+			}
+		}
+		unset($allRolls);
+		return $allRollsGrouped;
+	}
+
+	public function getPostIdsInRollRange($start, $limit)
+	{
+		$db = $this->_getDb();
+
+		return $db->fetchCol($db->limit('
+				SELECT distinct(post_id) as post_id
+				FROM xf_hoffi_dm_rolls
+				WHERE roll_id > ? AND roll_state = "visible"
+				ORDER BY roll_id
+			', $limit), $start);
+	}
+	
+	public function getRollsInRange($start, $limit)
+	{
+		$db = $this->_getDb();
+
+		return $this->fetchAllKeyed($db->limit('
+				SELECT roll_id, thread_id, user_id
+				FROM xf_hoffi_dm_rolls
+				WHERE roll_id > ? AND roll_state = "visible"
+				ORDER BY roll_id
+			', $limit), 'roll_id', $start);
+	}
+	
+	public function fetchUserRollCount($userId)
+	{
+		$info = $this->_getDb()->fetchRow('
+			SELECT count(*) as C
+			FROM xf_hoffi_dm_rolls
+			WHERE  roll_state = "visible"
+			AND user_id = ?', $userId);
+		
+		return $info['C'];
+	}
 
 }

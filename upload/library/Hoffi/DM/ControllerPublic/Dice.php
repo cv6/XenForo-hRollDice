@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Dice Roller
  * @author Hoffi
@@ -8,7 +9,7 @@
  */
 class Hoffi_DM_ControllerPublic_Dice extends XenForo_ControllerPublic_Abstract
 {
-	
+
 	public function actionIndex()
 	{
 		$params = array();
@@ -21,18 +22,18 @@ class Hoffi_DM_ControllerPublic_Dice extends XenForo_ControllerPublic_Abstract
 		$forum_name = $this->_input->filterSingle('node_name', XenForo_Input::STRING);
 
 		$ftpHelper = $this->getHelper('ForumThreadPost');
-        $forum = $ftpHelper->assertForumValidAndViewable($forum_id > 0 ? $forum_id : $forum_name);
+		$forum = $ftpHelper->assertForumValidAndViewable($forum_id > 0 ? $forum_id : $forum_name);
 		return $this->_doRoll($forum);
 	}
-	
+
 	public function actionRollPost()
 	{
 		$thread_id = $this->_input->filterSingle('thread_id', XenForo_Input::UINT);
-        $ftpHelper = $this->getHelper('ForumThreadPost');
+		$ftpHelper = $this->getHelper('ForumThreadPost');
 		list($thread, $forum) = $ftpHelper->assertThreadValidAndViewable($thread_id);
 		return $this->_doRoll($forum);
 	}
-	
+
 	private function _doRoll($forum, $thread_id = 0)
 	{
 		if (!$this->_getForumModel()->canRollDiceInForum($forum, $errorPhraseKey))
@@ -43,7 +44,7 @@ class Hoffi_DM_ControllerPublic_Dice extends XenForo_ControllerPublic_Abstract
 		$hash = XenForo_Helper_Cookie::getCookie('dice_hash');
 		if (!$hash)
 		{
-			$hash = md5('my'.time().'dice$now'.XenForo_Visitor::getUserId().'#'.rand(100,2000));
+			$hash = md5('my' . time() . 'dice$now' . XenForo_Visitor::getUserId() . '#' . rand(100, 2000));
 			XenForo_Helper_Cookie::setCookie('dice_hash', $hash, 360);
 		}
 
@@ -64,12 +65,12 @@ class Hoffi_DM_ControllerPublic_Dice extends XenForo_ControllerPublic_Abstract
 		$rules = $this->_getRuleModel()->getAllRules(true);
 
 		$params = array(
-			'wiresets' => array(),
-			'dice' => $dice,
-			'firstWireset' => null,
-			'thread_id' => $thread_id
+				'wiresets' => array(),
+				'dice' => $dice,
+				'firstWireset' => null,
+				'thread_id' => $thread_id
 		);
-		foreach($wiresetList as $tag => $ws)
+		foreach ($wiresetList as $tag => $ws)
 		{
 			if ($ws['active'] == 1)
 			{
@@ -85,11 +86,11 @@ class Hoffi_DM_ControllerPublic_Dice extends XenForo_ControllerPublic_Abstract
 				}
 				else
 				{
-					$d = explode(",",$ws['dietypes']);
+					$d = explode(",", $ws['dietypes']);
 				}
-				foreach($d as $die)
+				foreach ($d as $die)
 				{
-					if (!empty($die) and !empty($tag))
+					if (!empty($die) and ! empty($tag))
 					{
 						$params['wiresets'][$tag]['dietypes'][$die] = $dice[$die];
 					}
@@ -116,21 +117,21 @@ class Hoffi_DM_ControllerPublic_Dice extends XenForo_ControllerPublic_Abstract
 	{
 		$this->_assertPostOnly();
 
-        $hash = XenForo_Helper_Cookie::getCookie('dice_hash');
+		$hash = XenForo_Helper_Cookie::getCookie('dice_hash');
 		$wireset_tag = $this->_input->filterSingle('dicetag', XenForo_Input::STRING);
 		$thread_id = $this->_input->filterSingle('thread_id', XenForo_Input::INT);
 		$comment = $this->_input->filterSingle('roll_comment', XenForo_Input::ARRAY_SIMPLE);
 
-        if ($thread_id)
-        {
-            $ftpHelper = $this->getHelper('ForumThreadPost');
-            list($thread, $forum) = $ftpHelper->assertThreadValidAndViewable($thread_id);
-            if (!$this->_getForumModel()->canRollDiceInForum($forum, $errorPhraseKey))
-            {
-                throw $this->getErrorOrNoPermissionResponseException($errorPhraseKey);
-            }
-        }
-        
+		if ($thread_id)
+		{
+			$ftpHelper = $this->getHelper('ForumThreadPost');
+			list($thread, $forum) = $ftpHelper->assertThreadValidAndViewable($thread_id);
+			if (!$this->_getForumModel()->canRollDiceInForum($forum, $errorPhraseKey))
+			{
+				throw $this->getErrorOrNoPermissionResponseException($errorPhraseKey);
+			}
+		}
+
 		//var_export($params);
 		$roller = new Hoffi_DM_Dice_Roller(
 						$this->getModelFromCache('Hoffi_DM_Model_Wireset'),
@@ -155,9 +156,9 @@ class Hoffi_DM_ControllerPublic_Dice extends XenForo_ControllerPublic_Abstract
 			$option = $this->_input->filterSingle('option', XenForo_Input::ARRAY_SIMPLE);
 			if (array_key_exists($wireset_tag, $option) && is_array($option[$wireset_tag]))
 			{
-				foreach($option[$wireset_tag] as $title => $value)
+				foreach ($option[$wireset_tag] as $title => $value)
 				{
-					$roller->setOption($title,$value);
+					$roller->setOption($title, $value);
 				}
 			}
 
@@ -189,27 +190,27 @@ class Hoffi_DM_ControllerPublic_Dice extends XenForo_ControllerPublic_Abstract
 		else
 		{
 			return $this->responseError(new XenForo_Phrase('h_dm_you_cant_roll'));
-
 		}
 	}
 
 	public function actionDelete()
 	{
-        $roll_id = $this->_input->filterSingle('roll_id', XenForo_Input::INT);
-        $ftpHelper = $this->getHelper('ForumThreadPost');
-        $postModel = $this->_getPostModel();
+		$roll_id = $this->_input->filterSingle('roll_id', XenForo_Input::INT);
+		$ftpHelper = $this->getHelper('ForumThreadPost');
+		$postModel = $this->_getPostModel();
 		$rollModel = $this->_getRollModel();
 		$roll = $rollModel->getRollByRoll($roll_id);
 		if (empty($roll))
 		{
-			throw $this->getErrorOrNoPermissionResponseException('');
-		}  
-        
-        list($post, $thread, $forum) = $ftpHelper->assertThreadValidAndViewable($roll['post_id']);
-		if (!$postModel->canDeleteDiceRoll($post, $thread, $forum, $errorPhraseKey))
+			throw $this->getErrorOrNoPermissionResponseException('requested_h_dm_roll_not_found',true);
+		}
+		list(	$post, 
+					$thread, 
+					$forum ) = $ftpHelper->assertPostValidAndViewable($roll['post_id']);
+		if (!$postModel->canDeleteDiceRoll($post, $thread, $forum))
 		{
-			throw $this->getErrorOrNoPermissionResponseException($errorPhraseKey);
-		}  
+			throw $this->getErrorOrNoPermissionResponseException('h_dm_you_have_insufficient_rights_to_delete_rolls',true);
+		}
 
 		$params = array('roll_id' => $roll_id);
 		return $this->responseView('Hoffi_DM_ViewPublic_Roll', 'hoffi_delete_roll', $params);
@@ -217,48 +218,50 @@ class Hoffi_DM_ControllerPublic_Dice extends XenForo_ControllerPublic_Abstract
 
 	public function actionDeleteNow()
 	{
-        $this->_assertPostOnly();
-        $roll_id = $this->_input->filterSingle('roll_id', XenForo_Input::INT);
-        $ftpHelper = $this->getHelper('ForumThreadPost');
-        $postModel = $this->_getPostModel();
+		$this->_assertPostOnly();
+		$roll_id = $this->_input->filterSingle('roll_id', XenForo_Input::INT);
+		$ftpHelper = $this->getHelper('ForumThreadPost');
+		$postModel = $this->_getPostModel();
 		$rollModel = $this->_getRollModel();
 		$roll = $rollModel->getRollByRoll($roll_id);
 		if (empty($roll))
 		{
-			throw $this->getErrorOrNoPermissionResponseException('');
-		}  
-        
-        list($post, $thread, $forum) = $ftpHelper->assertThreadValidAndViewable($roll['post_id']);
-		if (!$postModel->canDeleteDiceRoll($post, $thread, $forum, $errorPhraseKey))
+			throw $this->getErrorOrNoPermissionResponseException('requested_h_dm_roll_not_found',true);
+		}
+
+		list($post, $thread, $forum) = $ftpHelper->assertPostValidAndViewable($roll['post_id']);
+		if (!$postModel->canDeleteDiceRoll($post, $thread, $forum))
 		{
-			throw $this->getErrorOrNoPermissionResponseException($errorPhraseKey);
-		}        
-		
-		$dataDw = XenForo_DataWriter::create('Hoffi_DM_DataWriter_Roll');
-        $options = array(
-            'roll_id' => $roll_id
-        );
-        $options['comment'] = (array_key_exists('comment', $roll)?$roll['comment']:'');
-        $dataDw->softDeleteRoll($roll_id);
-        $roll['username'] = $post['username'];
-        XenForo_Model_Log::logModeratorAction(
-            'dice_roll', $roll, 'delete_roll', $options
-        );
-		
+			throw $this->getErrorOrNoPermissionResponseException('h_dm_you_have_insufficient_rights_to_delete_rolls',true);
+		}
+
+		$rollDw = XenForo_DataWriter::create('Hoffi_DM_DataWriter_Roll');
+		$options = array(
+				'roll_id' => $roll_id
+		);
+		$options['comment'] = (array_key_exists('comment', $roll) ? $roll['comment'] : '');
+		$rollDw->softDeleteRoll($roll_id);
+		$roll['username'] = $post['username'];
+		XenForo_Model_Log::logModeratorAction(
+						'dice_roll', $roll, 'delete_roll', $options
+		);
+		$rollDw->updateThreadDiceRolls($roll['thread_id'],-1);
+		$rollDw->updateUserDiceRolls($roll['user_id'],-1);
+
 		$authorAlert = $this->_input->filterSingle('send_author_alert', XenForo_Input::BOOLEAN);
 		$authorAlertReason = $this->_input->filterSingle('author_alert_reason', XenForo_Input::STRING);
 
-		if ($authorAlert) 
+		if ($authorAlert)
 		{
 			$thread = $this->_getThreadModel()->getThreadById($roll['thread_id']);
 			$extra = array(
-				'title' => $thread['title'],
-				'link' => XenForo_Link::buildPublicLink('posts', $roll),
-				'threadLink' => XenForo_Link::buildPublicLink('threads', $thread),
-				'reason' => $authorAlertReason,
-				'roll' => $roll
+					'title' => $thread['title'],
+					'link' => XenForo_Link::buildPublicLink('posts', $roll),
+					'threadLink' => XenForo_Link::buildPublicLink('threads', $thread),
+					'reason' => $authorAlertReason,
+					'roll' => $roll
 			);
-			
+
 			XenForo_Model_Alert::alert(
 				$roll['user_id'],
 				0, '',
@@ -267,7 +270,7 @@ class Hoffi_DM_ControllerPublic_Dice extends XenForo_ControllerPublic_Abstract
 				$extra
 			);
 		}
-		
+
 		return $this->responseRedirect(
 				XenForo_ControllerResponse_Redirect::SUCCESS,
 				XenForo_Link::buildPublicLink('thread', $roll['thread_id'], array()),
@@ -275,22 +278,22 @@ class Hoffi_DM_ControllerPublic_Dice extends XenForo_ControllerPublic_Abstract
 				array('feedback' => 'deleted','roll_id' => $roll_id)
 		);
 	}
-	
+
 	private function _getForumModel()
 	{
 		return $this->getModelFromCache('XenForo_Model_Forum');
 	}
-	
+
 	private function _getWiresetModel()
 	{
 		return $this->getModelFromCache('Hoffi_DM_Model_Wireset');
 	}
-	
+
 	private function _getRuleModel()
 	{
 		return $this->getModelFromCache('Hoffi_DM_Model_Rules');
 	}
-	
+
 	private function _getDiceModel()
 	{
 		return $this->getModelFromCache('Hoffi_DM_Model_Dice');
@@ -305,9 +308,10 @@ class Hoffi_DM_ControllerPublic_Dice extends XenForo_ControllerPublic_Abstract
 	{
 		return $this->getModelFromCache('XenForo_Model_Thread');
 	}
-    
+
 	private function _getPostModel()
 	{
 		return $this->getModelFromCache('XenForo_Model_Post');
 	}
+
 }

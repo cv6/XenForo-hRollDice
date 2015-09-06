@@ -77,7 +77,7 @@ class Hoffi_DM_ControllerAdmin_DiceManager extends XenForo_ControllerAdmin_Abstr
 				case '0': $rules['disabled']++; break;
 			}
 		}
-
+		
 		return $this->responseView('', 'hoffi_dm_main', array(
 			'wiresets' => $wireset,
 			'dice' => $dice,

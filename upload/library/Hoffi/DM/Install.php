@@ -209,9 +209,9 @@ class Hoffi_DM_Install
 			ADD COLUMN `h_dm_wiresets` TEXT NULL,
 			ADD COLUMN `h_dm_dicecount` TINYINT(3) UNSIGNED NOT NULL DEFAULT '5' AFTER `h_dm_allowdiceroll`;
 		";
-//		$alters['xf_thread'] = "
-//			ALTER TABLE `xf_thread`
-//				ADD COLUMN `h_dice_rolls` INT UNSIGNED NOT NULL DEFAULT '0'";
+		$alters['xf_thread'] = "
+			ALTER TABLE `xf_thread`
+				ADD COLUMN `h_dice_rolls` INT UNSIGNED NOT NULL DEFAULT '0'";
 
 		return $alters;
 	}
@@ -270,7 +270,43 @@ class Hoffi_DM_Install
 
 	public static function update($version)
 	{
-		// Actually no update...#
+		$db = XenForo_Application::get('db');
+			try {
+				$db->query("ALTER TABLE `xf_hoffi_dm_dice`
+		ALTER `title` DROP DEFAULT,
+		ALTER `values` DROP DEFAULT;");
+				$db->query("ALTER TABLE `xf_hoffi_dm_dice`
+		CHANGE COLUMN `tag` `tag` VARCHAR(10) NOT NULL COLLATE 'utf8_general_ci' FIRST,
+		CHANGE COLUMN `title` `title` VARCHAR(50) NOT NULL COLLATE 'utf8_general_ci' AFTER `tag`,
+		CHANGE COLUMN `values` `values` VARCHAR(200) NULL DEFAULT NULL COLLATE 'utf8_general_ci' AFTER `sides`;");
+				$db->query("ALTER TABLE `xf_hoffi_dm_rolls`
+		CHANGE COLUMN `hash` `hash` VARCHAR(35) NULL DEFAULT NULL COLLATE 'utf8_general_ci' AFTER `roll_id`,
+		CHANGE COLUMN `comment` `comment` VARCHAR(200) NULL DEFAULT NULL COLLATE 'utf8_general_ci' AFTER `thread_id`,
+		CHANGE COLUMN `data` `data` TEXT NOT NULL COLLATE 'utf8_general_ci' AFTER `comment`,
+		CHANGE COLUMN `options` `options` TEXT NULL AFTER `roll_time`;");
+				$db->query("ALTER TABLE `xf_hoffi_dm_rules`
+		ALTER `title` DROP DEFAULT,
+		ALTER `php_callback_class` DROP DEFAULT,
+		ALTER `php_callback_method` DROP DEFAULT,
+		ALTER `optionlist` DROP DEFAULT;");
+				$db->query("ALTER TABLE `xf_hoffi_dm_rules`
+		CHANGE COLUMN `title` `title` VARCHAR(50) NOT NULL COLLATE 'utf8_general_ci' AFTER `rule`,
+		CHANGE COLUMN `php_callback_class` `php_callback_class` VARCHAR(100) NOT NULL COLLATE 'utf8_general_ci' AFTER `active`,
+		CHANGE COLUMN `php_callback_method` `php_callback_method` VARCHAR(50) NOT NULL COLLATE 'utf8_general_ci' AFTER `php_callback_class`,
+		CHANGE COLUMN `optionlist` `optionlist` VARCHAR(250) NOT NULL COLLATE 'utf8_general_ci' AFTER `php_callback_method`;");
+				$db->query("ALTER TABLE `xf_hoffi_dm_dice`
+		ADD UNIQUE INDEX `title` (`title`);");
+				$db->query("ALTER TABLE `xf_hoffi_dm_rules`
+		ADD UNIQUE INDEX `title` (`title`);");
+				$db->query("ALTER TABLE `xf_hoffi_dm_rolls`
+		ADD INDEX `post_id` (`post_id`),
+		ADD INDEX `user_id` (`user_id`),
+		ADD INDEX `thread_id` (`thread_id`);");
+			}
+			catch (Zend_Db_Exception $e) {
+				self::_logError($e);
+			}
+
 			self::_log('Updating from ' . $version);
 			$api = Hoffi_API_Client::getInstance('hRollDice', 'hKeyDice', $version);
 			$api->checkKey();
@@ -278,7 +314,7 @@ class Hoffi_DM_Install
 
 	private static function _logError($e)
 	{
-        XenForo_Error::logException($e, false);
+        	XenForo_Error::logException($e, false);
 		$text = "Error: " . $e->getCode() . " - " . $e->getMessage();
 		self::_log($text . "\n" . $e->getTraceAsString(), 'hDiceError');
 		self::_log($text);

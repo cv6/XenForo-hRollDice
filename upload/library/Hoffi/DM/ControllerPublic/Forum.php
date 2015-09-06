@@ -16,4 +16,11 @@ class Hoffi_DM_ControllerPublic_Forum extends XFCP_Hoffi_DM_ControllerPublic_For
 		return $response;
 	}	
 	
+	public function actionForum()
+	{
+		$response = parent::actionForum();
+		$response->params['forum']['allow_diceroll'] = $this->_getForumModel()->canRollDiceInForum($response->params['forum']);
+		return $response;
+	}	
+	
 }

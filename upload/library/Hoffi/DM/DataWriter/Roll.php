@@ -62,24 +62,24 @@ class Hoffi_DM_DataWriter_Roll extends XenForo_DataWriter {
 
 	function updateAllRollsByHashAndUserID($hash, $userid, $postid, $threadid)
 	{
-		$this->_db->query('
-					UPDATE xf_hoffi_dm_rolls SET
-						post_id = ?,
-						thread_id = ?,
-						hash = NULL
-					WHERE hash = ? and user_id = ?
-				', array($postid, $threadid, $hash, $userid));
-		return true;
+		return $this->_db->update('xf_hoffi_dm_rolls', 
+						array(
+								'post_id' => $postid,
+								'thread_id' => $threadid,
+								'hash' => NULL
+						), 
+						'hash = '. $this->_db->quote($hash).' and user_id = '. $this->_db->quote($userid)
+		);
 	}
 	
-	function updateRollStateByPostId($post_id, $state)
+	function updateRollStateByPostId($postId, $state)
 	{
-		$this->_db->query('
-					UPDATE xf_hoffi_dm_rolls SET
-						roll_state = ?
-					WHERE post_id = ?
-				', array($state, $post_id));
-		return true;		
+		return $this->_db->update('xf_hoffi_dm_rolls', 
+						array(
+								'roll_state' => $state
+						), 
+						'post_id = ' . $this->_db->quote($postId)
+		);
 	}
 
 	function updateRollStateByThreadId($thread_id, $state)
@@ -92,25 +92,35 @@ class Hoffi_DM_DataWriter_Roll extends XenForo_DataWriter {
 		return true;		
 	}
 	
-	function assignRollsNewThread($targetThreadId, $mergeFromThreadIds)
+	function assignRollsNewThreadFromThread($targetThreadId, $mergeFromThreadIds)
 	{
-		$this->_db->query('
-					UPDATE xf_hoffi_dm_rolls SET
-						thread_id = ?
-					WHERE thread_id IN (' . $this->_db->quote($mergeFromThreadIds) . ')
-				', array($targetThreadId));
-		return true;				
+		return $this->_db->update('xf_hoffi_dm_rolls', 
+						array(
+								'thread_id' => $targetThreadId
+						), 
+						'thread_id IN (' . $this->_db->quote($mergeFromThreadIds) . ')'
+		);
+	}
+	
+	function assignRollsNewThreadByRoll($targetThreadId, $mergeFromRollIds)
+	{
+		return $this->_db->update('xf_hoffi_dm_rolls', 
+						array(
+								'thread_id' => $targetThreadId
+						), 
+						'roll_id IN (' . $this->_db->quote($mergeFromRollIds) . ')'
+		);
 	}
 	
 	function assignRollsNewThreadAndPost($targetThreadId, $targetPostId, $mergeFromRollIds)
 	{
-		$this->_db->query('
-					UPDATE xf_hoffi_dm_rolls SET
-						thread_id = ?,
-						post_id = ?
-					WHERE roll_id IN (' . $this->_db->quote($mergeFromRollIds) . ')
-				', array($targetThreadId, $targetPostId));
-		return true;				
+		return $this->_db->update('xf_hoffi_dm_rolls', 
+						array(
+								'thread_id' => $targetThreadId,
+								'post_id' => $targetPostId
+						), 
+						'roll_id IN (' . $this->_db->quote($mergeFromRollIds) . ')'
+		);
 	}
 	
 	function assignRollsNewUser($targetUserId, $mergeFromRollIds)
@@ -132,11 +142,33 @@ class Hoffi_DM_DataWriter_Roll extends XenForo_DataWriter {
 				', array($new_post_id, $old_post_id));
 		return true;				
 	}
-	
 
-	public function throwData()
+	public function updateThreadDiceRolls($threadId, $addRollCounter)
 	{
-		var_export($this);
+		return $this->_db->query('
+						UPDATE xf_thread
+						SET h_dice_rolls = h_dice_rolls + ?
+						WHERE thread_id = ?
+					', array($addRollCounter, $threadId));
+	}
+
+	public function updateUserDiceRolls($userId, $addRollCounter)
+	{
+		return $this->_db->query('
+						UPDATE xf_user
+						SET diceroll_count = diceroll_count + ?
+						WHERE user_id = ?
+					', array($addRollCounter, $userId));
+	}
+	
+	public function resetUserCounter()
+	{
+		$this->_db->update('xf_user',array('diceroll_count' => 0));
+	}
+
+	public function resetThreadCounter()
+	{
+		$this->_db->update('xf_thread',array('h_dice_rolls' => 0));
 	}
 
 }

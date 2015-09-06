@@ -10,22 +10,22 @@ class Hoffi_DM_Model_DiceManager_User extends XFCP_Hoffi_DM_Model_DiceManager_Us
 					
 	protected function _getModelRoll()
 	{
-		return $this->getModelFromCache('Hoffi_Model_Rolls');
+		return $this->getModelFromCache('Hoffi_DM_Model_Rolls');
 	}
 
 	protected function _getModelDice()
 	{
-		return $this->getModelFromCache('Hoffi_Model_Dice');
+		return $this->getModelFromCache('Hoffi_DM_Model_Dice');
 	}
 
 	protected function _getModelWiresets()
 	{
-		return $this->getModelFromCache('Hoffi_Model_Wireset');
+		return $this->getModelFromCache('Hoffi_DM_Model_Wireset');
 	}
 
 	protected function _getModelRules()
 	{
-		return $this->getModelFromCache('Hoffi_Model_Rules');
+		return $this->getModelFromCache('Hoffi_DM_Model_Rules');
 	}
 
 	public function prepareUserConditions(array $conditions, array &$fetchOptions)
@@ -52,6 +52,14 @@ class Hoffi_DM_Model_DiceManager_User extends XFCP_Hoffi_DM_Model_DiceManager_Us
 		}
 
 		return parent::prepareUserOrderOptions($fetchOptions, $defaultOrderSql);
+	}
+	
+	public function rebuildRollCounter($userId)
+	{
+		return $this->_getDb()->update('xf_user',
+			array('diceroll_count' => $this->_getModelRoll()->fetchUserRollCount($userId)),
+			'user_id = '. $this->_getDb()->quote($userId)
+		);
 	}
 
 	protected function _getWiresetByTag($tag)

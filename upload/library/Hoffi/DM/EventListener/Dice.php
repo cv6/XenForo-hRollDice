@@ -61,14 +61,14 @@ class Hoffi_DM_EventListener_Dice
 	{
 		switch ($class)
 		{
+			case 'XenForo_DataWriter_User':
+				$extend[] = 'Hoffi_DM_DataWriter_DiceManager_User';
+				break;
 			case 'XenForo_DataWriter_Forum':
 				$extend[] = 'Hoffi_DM_DataWriter_DiceManager_Forum';
 				break;
 			case 'XenForo_DataWriter_Discussion_Thread':
 				$extend[] = 'Hoffi_DM_DataWriter_DiceManager_Thread';
-				break;
-			case 'XenForo_DataWriter_Discussion':
-				$extend[] = 'Hoffi_DM_DataWriter_DiceManager_Discussion';
 				break;
 			case 'XenForo_DataWriter_DiscussionMessage_Post':
 				$extend[] = 'Hoffi_DM_DataWriter_DiceManager_DiscussionMessage';
@@ -100,7 +100,7 @@ class Hoffi_DM_EventListener_Dice
 		switch ($rule)
 		{
 			case 'diceroll_count':
-				if (isset($user['diceroll_count']) && $user['diceroll_count'] >= $data['dicerolls'])
+				if (isset($user['diceroll_count']) && $user['diceroll_count'] >= $data['rolls'])
 				{
 					$returnValue = true;
 				}
