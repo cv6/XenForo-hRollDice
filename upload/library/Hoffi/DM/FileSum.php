@@ -32,7 +32,7 @@ class Hoffi_DM_FileSum
   'library\\Hoffi\\DM\\DataWriter\\Wireset.php' => '80acb52bcec0f512d71da90f1816951a',
   'library\\Hoffi\\DM\\Deferred\\Dice.php' => 'e3b78c1ec3ba4cacc8bce721fb53c52a',
   'library\\Hoffi\\DM\\Dice\\BbCode.php' => 'efcb27296bdc20db8d16a81ac345a590',
-  'library\\Hoffi\\DM\\Dice\\Roller.php' => '24767b23f98c14d213f9552d423cf8bb',
+  'library\\Hoffi\\DM\\Dice\\Roller.php' => '8d638531a452ca3125b301c91a1c91ea',
   'library\\Hoffi\\DM\\Dice\\RollViewer.php' => '0595aa3ba4344397456655a0b4771e90',
   'library\\Hoffi\\DM\\Dice\\Rules.php' => '7191f2918654339b478c41fe1865425b',
   'library\\Hoffi\\DM\\Dice\\Template.php' => '186f25ac73749955fe47b026d6c31920',

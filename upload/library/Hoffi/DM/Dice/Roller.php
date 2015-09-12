@@ -163,7 +163,16 @@ class Hoffi_DM_Dice_Roller
 				{
 					$side = mt_rand(1, $this->dice[$tag]['sides']) - 1;
 					$this->rolledDice[$tag]['result'][$i] = $this->dice[$tag]['source'][$side];
-					if ($this->rolledDice[$tag]['result'][$i] == $this->dice[$tag]['max'] && $this->wireset['explode'] == 'yes')
+					// Explode once
+					if ($this->rolledDice[$tag]['result'][$i] == $this->dice[$tag]['max'] && $this->wireset['explode'] == 'once' 
+									AND ($i == 0 OR ($i > 0 AND !array_key_exists("".$i-1, $this->rolledDice[$tag]['explode'])))
+					)
+					{
+						$die['count'] ++;
+						$this->rolledDice[$tag]['explode'][$i] = $i;
+					}
+					// Explode Infinite
+					else if ($this->rolledDice[$tag]['result'][$i] == $this->dice[$tag]['max'] && $this->wireset['explode'] == 'yes')
 					{
 						$die['count'] ++;
 						$this->rolledDice[$tag]['explode'][$i] = $i;
